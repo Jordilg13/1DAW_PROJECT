@@ -1,5 +1,5 @@
 <p>Product info:</p>
-<form name="formulario" method="POST" id="formulario">
+<form name="formm" method="POST" id="formm">
   <table border="0" cellspacing="5" cellpadding="0">
     <tr>
       <td >Product</td>

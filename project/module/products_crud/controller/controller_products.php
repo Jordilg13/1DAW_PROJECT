@@ -22,23 +22,22 @@ switch ($_GET['op']) {
         include("utils/validate.php");
                 
         $check = true;
-        debug($_POST);
-        if (isset($_POST['create'])){
+        if (isset($_POST['product'])){
             $check=validate();
             
             if ($check){
                 $_SESSION['user']=$_POST;
                 try{
-                    $daouser = new DAOUser();
-                    $rdo = $daouser->insert_user($_POST);
+                    $daoprod = new DAOProd();
+                    $rdo = $daoprod->insert_prod($_POST);
                 }catch (Exception $e){
                     $callback = 'index.php?page=503';
                     die('<script>window.location.href="'.$callback .'";</script>');
                 }
                 
                 if($rdo){
-                    echo '<script language="javascript">alert("Registrado en la base de datos correctamente")</script>';
-                    $callback = 'index.php?page=controller_user&op=list';
+                    echo '<script language="javascript">alert("Product created succesfully")</script>';
+                    $callback = 'index.php?page=controller_products&op=list';
                     die('<script>window.location.href="'.$callback .'";</script>');
                 }else{
                     $callback = 'index.php?page=503';
@@ -46,7 +45,7 @@ switch ($_GET['op']) {
                 }
             }
         }
-        include("module/user/view/create_user.php");
+        include("pages/products_form.php");
         break;
 
     case 'read':
@@ -54,6 +53,7 @@ switch ($_GET['op']) {
             $daoprod = new DAOProd();
             $rdo = $daoprod->select_prod($_GET['id']);
             $user=get_object_vars($rdo);
+
         }catch (Exception $e){
             $callback = 'index.php?page=503';
             die('<script>window.location.href="'.$callback .'";</script>');

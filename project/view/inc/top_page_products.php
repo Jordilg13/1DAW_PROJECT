@@ -8,7 +8,20 @@
   	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script type="text/javascript" src="utils/datepicker.js"></script>
+	  <script type="text/javascript">
+        	$(function() {
+				$('#demo1').datepicker({
+					dateFormat: 'dd/mm/yy', 
+					changeMonth: true, 
+					changeYear: true, 
+					yearRange: '-10:+10',
+					minDate: 0,
+					// onSelect: function(selectedDate) {
+					//     alert(selectedDate);
+					// }
+				});
+			});
+	    </script>
 	<script type="text/javascript" src="utils/validate_fields.js"></script>
 </head>
 <body>

@@ -2,7 +2,7 @@
     include("model/connect.php");
     
 	class DAOUser{
-		function insert_user($datos){
+		function insert_prod($datos){
 			$user=$datos[usuario];
         	$passwd=$datos[pass];
         	$name=$datos[nombre];
@@ -19,8 +19,8 @@
         	    $hobby=$hobby."$indice:";
         	}
         	$sql = " INSERT INTO users_ejer8 (user, pass, name, dni, sex, birthdate, age, country, language, comment, hobby)"
-        		. " VALUES ('$user', '$passwd', '$name', '$dni', '$sex', '$birthdate', '$age', '$country', '$language', '$comment', '$hobby')";
-            
+				. " VALUES ('$user', '$passwd', '$name', '$dni', '$sex', '$birthdate', '$age', '$country', '$language', '$comment', '$hobby')";
+				
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);
             connect::close($conexion);

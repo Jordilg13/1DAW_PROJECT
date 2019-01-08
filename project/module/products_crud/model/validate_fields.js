@@ -47,8 +47,8 @@ function validate_prod(){
 
     // document.formulario_update.action="index.php?page=controller_products&op=update";
     
-    document.formulario_update.submit();
-    document.formulario_update.action="";
+    document.formm.submit();
+    document.formm.action="";
 	
 
 }

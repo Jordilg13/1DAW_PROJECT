@@ -2,24 +2,18 @@
 include("utils/class.php");
 
 class DAOProd{
-    function insert_user($datos){
-        $user=$datos[usuario];
-        $passwd=$datos[pass];
-        $name=$datos[nombre];
-        $dni=$datos[DNI];
-        $sex=$datos[sexo];
-        $birthdate=$datos[fecha_nacimiento];
-        $age=$datos[edad];
-        $country=$datos[pais];
-        foreach ($datos[idioma] as $indice) {
-            $language=$language."$indice:";
-        }
-        $comment=$datos[observaciones];
-        foreach ($datos[aficion] as $indice) {
-            $hobby=$hobby."$indice:";
-        }
-        $sql = " INSERT INTO users_ejer8 (user, pass, name, dni, sex, birthdate, age, country, language, comment, hobby)"
-            . " VALUES ('$user', '$passwd', '$name', '$dni', '$sex', '$birthdate', '$age', '$country', '$language', '$comment', '$hobby')";
+    function insert_prod($data){
+        $product = $data['product'];
+        $brand = $data['brand'];
+        $m_email = $data['m_email'];
+        $state = $data['state'];
+        $prod_type = $data['prod_type'];
+        $type_proc="";
+        $type_proc = implode(",",$data['type_proc']);
+        $aviable_until_date = $data['aviable_until_date'];
+
+        $sql = " INSERT INTO products (product_name, brand, m_email, state_product, product_type, processor_type, aviable_until)"
+            . " VALUES ('$product', '$brand', '$m_email', '$state', '$prod_type', '$type_proc', '$aviable_until_date')";
         
         $conexion = Conectar::con();
         $res = mysqli_query($conexion, $sql);

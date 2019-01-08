@@ -7,7 +7,7 @@
     		$pass = "";                             //Remember, there is NO password!
     		$db = "comentarios";                      //Your database name you want to connect to
     		$port = 3306;                           //The port #. It is always 3306
-    		$tabla="mensajes";
+    		$tabla="products";
     		
     		$conexion = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
 			return $conexion;

@@ -1,6 +1,6 @@
 <div id="contenido">
 <p>Product info:</p>
-<form name="formulario_update" method="POST" id="formulario_update">
+<form name="formm" method="POST" id="formm">
   <table border="0" cellspacing="5" cellpadding="0">
     <tr>
       <td >Product</td>

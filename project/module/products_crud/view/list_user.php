@@ -4,7 +4,7 @@
     			<h3>LISTA DE PRODUCTOS</h3>
     	</div>
     	<div class="row">
-    		<p><a href="index.php?page=controller_user&op=create"><img src="view/img/anadir.png"></a></p>
+    		<p><a href="index.php?page=controller_products&op=create"><img src="view/img/anadir.png"></a></p>
     		
     		<table>
                 <tr>
@@ -16,7 +16,7 @@
                 <?php
                     if ($rdo->num_rows === 0){
                         echo '<tr>';
-                        echo '<td align="center"  colspan="3">NO HAY NINGUN USUARIO</td>';
+                        echo '<td align="center"  colspan="3">THERE AREN\'T PRODUCTS</td>';
                         echo '</tr>';
                     }else{
                         foreach ($rdo as $row) {
