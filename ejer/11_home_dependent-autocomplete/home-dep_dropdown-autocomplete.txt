@@ -1,0 +1,14 @@
+- https://www.jose-aguilar.com/blog/autocompletar-campo-con-jquery-ajax-y-php/
+- https://github.com/vinoth-am/jQuery-Autocomplete-Dropdown-based-Search-using-PHP-MySQL-and-Ajax
+
+Més
+http://www.encodedna.com/2013/08/jquery-autocomplete-dropdown-list-on-focus.htm
+http://jsfiddle.net/YPBts/2/
+https://github.com/zhem4ag/jquery_cityAutocomplete
+https://github.com/geoffreybans/jquery-autocomplete
+https://github.com/asleepwalker/jquery-ui.autocomplete.match
+
+http://blog.collectivecloudperu.com/buscar-en-tiempo-real-con-jquery-y-bootstrap/
+https://www.solvetic.com/tutoriales/article/1340-generar-listados-dinamicos-con-jquery-php-y-mysql/
+https://www.ideaschile.cl/busqueda-jquery-php-mysql.php
+http://www.webcamp.es/crear-filtro-de-busqueda-con-jquery/

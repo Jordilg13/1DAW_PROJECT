@@ -1,0 +1,15 @@
+Templates responsive free
+--------------------------------------------------------------------
+	- https://www.bootstrapzero.com/
+	- http://www.html5zero.com/
+	- http://html5up.net/
+	- http://shapebootstrap.net/
+	- http://templated.co/
+	- https://w3layouts.com/
+	- http://binarytheme.com
+	- http://designbootstrap.net/
+	- http://materializecss.com/
+	
+- El template de classe:
+	http://binarytheme.com/BTlivedemos/05-2014/31/bs-multipurpose-Ruma/
+	

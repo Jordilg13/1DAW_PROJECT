@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* Inicialización */
+* {
+      padding: 0;  margin: 0;
+   	/*border: 1px dotted red;*/
+
+}
+
+body {
+      width: 70%;
+      margin: 0px auto; /*Centrar automaticamente*/
+      margin-top: 60px;
+      background-image: url('../imagenes/fondo.png');
+}
+
+/* Maquetación a 2 columnas */
+div#tabla{
+      display: table;
+}
+
+div#tabla nav {
+      display: table-cell;
+      width: 20%;
+      vertical-align: top;
+      text-align: center;
+      background-color: lightgrey;
+}
+
+section#principal {
+      display: table-cell;
+      width: 80%;
+      vertical-align: top;
+      background-color: lightgrey;
+}
+
+section#principal article {
+      margin: 35px;
+}
+
+/* PIE DE PÁGINA*/
+footer{
+      text-align: right;
+      font-style: italic;
+      background-color: orange;
+      padding: 10px;
+}
+
+
+/* BOTONERA */
+nav>ul>li{
+      list-style-type: none;
+      background-color: orange;
+      margin: 15px 0px;
+}
+
+nav>ul>li>a{
+      border: 1px solid black;
+      color: brown;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+      padding: 3px 0px;
+}
+
+nav>ul>li>a:hover{
+      background-color: white;
+}
+
+a>img {
+      border-style: none;
+      margin-top: 40px 0px;
+}

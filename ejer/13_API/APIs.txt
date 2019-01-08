@@ -1,0 +1,66 @@
+1. Consumir una API des de PHP:
+	- http://tosblama.blogspot.com.es/2015/02/llamada-un-webservice-desde-php-xmljson.html
+
+2. Consumir una API des de jQuery:
+	- https://www.adictosaltrabajo.com/tutoriales/jquery-ajax-restful-web-service-json/
+	- https://pixelovers.com/api-facil-datos-usar-jquery-spotify-github/
+
+3. APIs:
+	- https://github.com/toddmotto/public-apis
+	- https://www.programmableweb.com/category/all/apis
+	- https://developers.google.com/apis-explorer/#p/
+	
+	- https://www.yelp.com/developers/api_console                   -> Restaurants
+	    https://github.com/eklitzke/yelp-api-examples/blob/master/googlemaps_example/businessSearch.html
+	    
+	- amadeus_sandbox:                                              -> Travels
+		- https://sandbox.amadeus.com/api-catalog
+		- https://sandbox.amadeus.com/getting-started
+		- https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-airport#sm-example-block
+	
+	- http://www.omdbapi.com/ 										-> Movies
+	- https://www.themoviedb.org/documentation/api 					-> Movies
+	    https://developers.themoviedb.org/3/getting-started/introduction
+	    
+	- https://www.programmableweb.com/api/open-food-facts 			-> Food
+	- https://devportal.tescolabs.com/docs/services                 -> Food
+	- https://openlibrary.org/dev/docs/api/search 					-> Books 
+	- https://developers.google.com/books/docs/v1/getting_started 	-> Books
+	
+	- http://ergast.com/mrd/ 										-> motor racing
+	- http://www.ine.es/dyngs/DataLab/en/manual.html?cid=45			-> Institut Nacional d'Estadística
+	- https://market.mashape.com/trailapi/trailapi 					-> hiking and mountain biking trails
+	- http://www.vam.ac.uk/api 										-> Victoria and Albert Museum
+	- https://allevents.in/pages/api 								-> Events
+	- https://www.petfinder.com/developers/api-docs 				-> Petfinder 
+	- https://developers.hotelrunner.com/ 							-> Hotel
+	- http://developers.mercadolibre.com/es/api-docs-es/ 			-> Productos/Vehiculos/Inmobiliaria/Servicios
+	- https://www.flickr.com/services/api/ 							-> flickr
+	
+	- https://darksky.net/dev 										-> weather API
+	- http://www.openweathermap.org/api                             -> weather API
+    - https://opendata.aemet.es/centrodedescargas/inicio            -> weather API
+    
+	- https://developer.spotify.com/web-api/ 						-> music
+	- https://www.last.fm/api                                       -> music
+        http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=rj&api_key=12ee421714031b80f353249c1a69780b&format=json
+        
+	- http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso 	-> Country information
+	- http://geoapi.es/inicio 													-> calles, poblaciones, provincias,... del territorio español
+	- http://www.webservicex.net/New/Home/Directory 							-> Country information
+	- http://www.geonames.org/export/ws-overview.html 							-> geographical database
+
+    - https://go.developer.ebay.com/                                -> EBay API
+        https://go.developer.ebay.com/quick-start-guide
+        http://developer.ebay.com/DevZone/finding/HowTo/GettingStarted_JS_NV_JSON/GettingStarted_JS_NV_JSON.html
+        http://developer.ebay.com/DevZone/finding/HowTo/index.html
+        
+    - https://aws.amazon.com/es/datasets/                           -> AWS Public Datasets
+    
+    - https://block.io/                                             -> Bitcoin API
+    - https://openexchangerates.org/                                -> currency data API
+
+	- https://api.ghost.org/v1.14.0/docs 							-> posts, users and tags
+	- https://dev.weebly.com/user-and-site-apis.html 				-> User API/Sites API/Pages API/Forms API/Blog API
+	- https://dev.weebly.com/store-api1.html 						-> Store APIs/Category APIs/Product APIs/Order APIs/Coupon APIs
+	

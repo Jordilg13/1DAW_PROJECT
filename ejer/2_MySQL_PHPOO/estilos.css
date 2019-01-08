@@ -1,0 +1,60 @@
+body{
+    width: 700px;
+    margin: auto;
+    background-color: #c3c3c3;
+}
+label{
+    display: block;/*con esto colocamos las etiquetas label encima de los campos*/
+    font-weight: bold;
+}
+.contacto{
+    border: 1px solid #CED5D7;
+    border-radius: 6px;
+    padding: 45px 45px 20px;
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #999;/*con esto le colocamos un borde al formulario*/
+}
+.contacto input[type='text'], .contacto textarea{
+    padding: 12px 14px;
+    width: 394px;
+    border: 1px solid #CED5D7;
+    resize: none;
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.contacto input[type='text']:focus, .contacto textarea:focus{
+    outline: none;
+    box-shadow:0 0 0 3px #dde9ec;
+}
+*{
+    font-family: Arial;
+    font-size: 12px;
+    color: #798e94;
+}
+.formulario{
+	margin-top: 100px;
+}
+.error{
+    background-color: #BC1010;
+    padding: 8px 10px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+	font-size: 12px;
+    margin-left: 16px;
+    margin-top: 6px;
+    position: absolute;
+}
+.error:before{ /* Este es un truco para crear una flechita */
+    content: '';
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #BC1010;
+    border-left: 10px solid transparent;
+    left: -16px;
+    position: absolute;
+    top: 5px;
+}
+
+

@@ -1,0 +1,137 @@
+body {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#333333;
+	background-color:#f9f7ed;
+	margin:0px;
+}
+#wrapper {
+	width:800px;
+	margin:auto;
+	background-color:#FFFFFF;	
+}
+#header {
+	height:80px;
+	background-image:url(img/header.png);
+	background-repeat:no-repeat;
+	height:120px;
+}
+#menu {
+	background-image:url(img/menu.png);
+	height:25px;
+	padding-top:5px;
+	text-align:center;
+}
+#menu a{
+	color:#FFFFFF;
+	text-decoration:none;
+	font-weight:bold;
+}
+#footer a{
+	color:#333333;
+	text-decoration:none;
+	font-weight:bold;
+}
+#footer p{
+	color:#333333;
+	text-decoration:none;
+}
+#menu a:hover, #footer a:hover{
+	text-decoration:underline;
+}
+#contenido {
+	padding:20px;
+}
+#footer {
+	height:130px;
+	color:#FFFFFF;
+	text-align:center;
+	background-image:url(img/footer.png);
+}
+h1 {
+	color:#33170D;
+	font-size:18px;
+	border-bottom:1px solid #FF9900;
+	padding-bottom:10px;
+}
+.styerror {
+    color: #ff0000;
+    font-family: arial;
+    font-size: 10pt;
+    font-style:italic;
+}
+.Button_green {
+	background-color:green;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid green;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_green:hover {
+	background-color:greenyellow;
+}
+.Button_green:active {
+	position:relative;
+	top:1px;
+}
+.Button_blue {
+	background-color:blue;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid blue;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_blue:hover {
+	background-color:cyan;
+}
+.Button_blue:active {
+	position:relative;
+	top:1px;
+}
+.Button_red {
+	background-color:crimson;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid crimson;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_red:hover {
+	background-color:red;
+}
+.Button_red:active {
+	position:relative;
+	top:1px;
+}
+.table_read {
+	border-collapse: collapse;
+	text-align: center;
+  }
+  
+  .table_read, .table_tr, .table_td {
+	padding: 15px;
+	border: 1px solid black;
+  }

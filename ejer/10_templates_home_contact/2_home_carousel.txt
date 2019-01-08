@@ -1,0 +1,15 @@
+jQuery carousel
+----------------------------------------------------------
+	http://sorgalla.com/jcarousel/
+		https://github.com/jsor/jcarousel/tree/master/examples/basic
+	http://www.slidesjs.com/
+	http://bxslider.com/
+	https://www.jssor.com/
+	
+Bootstrap JS Carousel
+----------------------------------------------------------
+	http://getbootstrap.com/docs/4.0/components/carousel/
+	http://getbootstrap.com/docs/4.0/components/alerts/
+	http://getbootstrap.com/docs/4.0/components/breadcrumb/
+	http://getbootstrap.com/docs/4.0/components/card/
+	http://getbootstrap.com/docs/4.0/components/navbar/

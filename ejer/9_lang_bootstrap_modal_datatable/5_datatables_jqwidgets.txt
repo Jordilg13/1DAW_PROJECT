@@ -1,0 +1,19 @@
+DataTables Table plug-in for jQuery
+-----------------------------------------------------------
+	- https://datatables.net/
+
+Javascript/jQuery UI Widgets
+-----------------------------------------------------------
+	- https://www.jqwidgets.com/jquery-widgets-demo/
+	
+	- jqxDropDownList with data from MySQL Database:
+		https://www.jqwidgets.com/jquery-widgets-demo/demos/php/index.htm#demos/php/dropdownlist.htm
+		https://www.jqwidgets.com/jquery-widgets-documentation/documentation/phpintegration/bind-jquery-dropdownlist-to-mysql-database-using-php.htm
+	
+	- jqxComboBox with data from MySQL Database:
+		https://www.jqwidgets.com/jquery-widgets-demo/demos/php/index.htm#demos/php/combobox.htm
+		https://www.jqwidgets.com/jquery-widgets-documentation/documentation/phpintegration/bind-jquery-combobox-to-mysql-database-using-php.htm
+	
+	- jqxGrid paging with data from MySQL Database:
+		https://www.jqwidgets.com/jquery-widgets-demo/demos/php/index.htm#demos/php/serverpaging.htm
+		https://www.jqwidgets.com/jquery-widgets-documentation/documentation/phpintegration/php-server-side-grid-paging.htm

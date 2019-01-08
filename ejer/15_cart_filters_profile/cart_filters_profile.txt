@@ -1,0 +1,25 @@
+1. cart:
+	- login/register
+	- exemple casadellibro: reservar prods API/comprar prods BD
+
+2. Profile -> mis_facturas/coupons_pdf/mis_compras, ...
+
+3. https://www.trivago.es -> filtros de búsqueda
+	https://jqueryui.com/accordion/
+	https://jqueryui.com/slider/
+	https://jqueryui.com/spinner/
+	https://jqueryui.com/tabs/
+	https://jqueryui.com/tooltip/
+	https://www.jqwidgets.com/jquery-widgets-demo/
+	https://getbootstrap.com/docs/4.0/components/buttons/
+
+	- https://github.com/yborunov/php-hotels-api -> $( "#slider-range" ).slider
+	- https://github.com/chousmith/restaurant-search
+		$('#filter').on('input', function()
+		<form action="index.php" class="navbar-form navbar-left" role="search">
+	            <input type="search" name="filter" id="filter" value="<?php if ( isset( $_GET['filter'] ) ) echo $_GET['filter']; ?>" class="form-control" placeholder="Search Name or Cuisine" title="Search Name or Cuisine" tabindex="1" autofocus>
+	            <span class="input-group-btn">
+	              <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+	- https://github.com/NdauwaRafael/Filter-data-using-multiple-dropdowns
+		<select class="browser-default" id="price" onchange="filterMeals()">
+	
