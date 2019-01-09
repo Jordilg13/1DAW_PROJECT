@@ -46,6 +46,7 @@
         ?>
       </select></td>
       <td><?php echo @$error[3] ?></td>
+      <td><span id="e_state" class="styerror"></span></td>
     </tr>
     <tr>
         <td>Product type</td>
@@ -135,6 +136,7 @@
            
       </td>
       <td><?php echo @$error[5] ?></td>
+      <td><span id="e_type_proc" class="styerror"></span></td>
     </tr>
     <tr>
         <td>
@@ -144,6 +146,7 @@
             <p><input id="demo1" type="text" name="aviable_until_date" value="<?php echo $user['aviable_until'];?>"><?php echo @$error[4] ?></p>
         </td>
         <td><?php echo @$error[6] ?></td>
+        <td><span id="e_aviable_until" class="styerror"></span></td>
     </tr>
     
     <tr>

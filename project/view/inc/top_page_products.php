@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>WebDesign</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />	
+	<link href="view/css/style7.3.css" rel="stylesheet" type="text/css" />	
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -14,7 +14,7 @@
 					dateFormat: 'dd/mm/yy', 
 					changeMonth: true, 
 					changeYear: true, 
-					yearRange: '-10:+10',
+					// yearRange: '1900:2100',
 					minDate: 0,
 					// onSelect: function(selectedDate) {
 					//     alert(selectedDate);
@@ -22,6 +22,6 @@
 				});
 			});
 	    </script>
-	<script type="text/javascript" src="utils/validate_fields.js"></script>
+	<script type="text/javascript" src="module/products_crud/model/validate_fields.js"></script>
 </head>
 <body>

@@ -1,5 +1,5 @@
 <?php
-include("utils/class.php");
+include("model/class.php");
 
 class DAOProd{
     function insert_prod($data){

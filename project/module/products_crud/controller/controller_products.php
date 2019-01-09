@@ -1,5 +1,5 @@
 <?php
-include ("module/user/model/DAOProd.php");
+include("module/products_crud/model/DAOProd.php");
 switch ($_GET['op']) {
     case 'list':
         try {
@@ -14,12 +14,12 @@ switch ($_GET['op']) {
             $callback = 'index.php?page=503';
             die('<script>window.location.href="'.$callback .'";</script>');
         }else{
-            include("pages/list_user.php");
+            include("module/products_crud/view/list_user.php");
         }
         break;
 
     case 'create':
-        include("utils/validate.php");
+        include("module/products_crud/model/validate.php");
                 
         $check = true;
         if (isset($_POST['product'])){
@@ -45,7 +45,7 @@ switch ($_GET['op']) {
                 }
             }
         }
-        include("pages/products_form.php");
+        include("module/products_crud/view/products_form.php");
         break;
 
     case 'read':
@@ -62,12 +62,12 @@ switch ($_GET['op']) {
             $callback = 'index.php?page=503';
             die('<script>window.location.href="'.$callback .'";</script>');
         }else{
-            include("pages/read_user.php");
+            include("module/products_crud/view/read_user.php");
         }
         break;
 
         case 'update';
-            include("utils/validate.php");
+            include("module/products_crud/model/validate.php");
             // echo("sdf");
             
             $check = true;
@@ -119,7 +119,7 @@ switch ($_GET['op']) {
     			// die('<script>window.location.href="'.$callback .'";</script>');
     		}else{
                 // echo('<script>console.log("2_else");</script>');
-        	    include("pages/update_user.php");
+        	    include("module/products_crud/view/update_user.php");
     		}
             break;
 
@@ -135,7 +135,7 @@ switch ($_GET['op']) {
                 
                 if($rdo){
                     echo '<script language="javascript">alert("Borrado en la base de datos correctamente")</script>';
-                    $callback = 'index.php?page=controller_user&op=list';
+                    $callback = 'index.php?page=controller_products&op=list';
                     die('<script>window.location.href="'.$callback .'";</script>');
                 }else{
                     $callback = 'index.php?page=503';
@@ -143,7 +143,7 @@ switch ($_GET['op']) {
                 }
             }
             
-            include("pages/delete_user.php");
+            include("module/products_crud/view/delete_user.php");
         break;
     default:
         echo("default");
