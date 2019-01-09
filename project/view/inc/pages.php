@@ -1,6 +1,6 @@
 <?php
 	if (!isset($_GET['page'])) {
-		include("view/inc/homepage.php");
+		include("module/home/controller/controller_home.php");
 	} else {
 		switch ($_GET['page']) {
 			case 'list_user':
@@ -25,7 +25,7 @@
 				include("view/inc/error".$_GET['page'].".php");
 				break;
 			default:
-				include("view/inc/homepage.php");
+				include("view/inc/error404.php");
 				break;
 		}
 	}
