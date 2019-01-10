@@ -1,3 +1,10 @@
+function validacode(code){
+    if (code.length > 0) {
+        var regexp = /^([A-Z]{1})([0-9]{4})$/;
+        return regexp.test(code);
+    }
+    return false;
+}
 function validastring(str){
     if (str.length > 0) {
         var regexp = /^[a-zA-Z0-9]*$/;
@@ -17,9 +24,19 @@ function validaemail(email) {
 function validate_prod(){
     var result = true;
 
+    var code = document.getElementById('product_code').value;
     var product = document.getElementById('product').value;
     var brand = document.getElementById('brand').value;
     var m_email = document.getElementById('m_email').value;
+
+    //product code
+    if (!validacode(code)) {
+        document.getElementById('e_product_code').innerHTML = "Invalid code for the product.";
+        result = false;
+    } else {
+        document.getElementById('e_product_code').innerHTML = "";
+    }
+
 
     //product name
     if (!validastring(product)) {

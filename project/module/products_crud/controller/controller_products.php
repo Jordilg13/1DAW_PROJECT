@@ -22,7 +22,7 @@ switch ($_GET['op']) {
         include("module/products_crud/model/validate.php");
                 
         $check = true;
-        if (isset($_POST['product'])){
+        if (isset($_POST['product_code'])){
             $check=validate();
             
             if ($check){
@@ -77,7 +77,7 @@ switch ($_GET['op']) {
             // debug($_SESSION);
             // echo("get");
             // debug($_GET);
-            if (isset($_POST['product'])){
+            if (isset($_POST['product_code'])){
                 $check=validate();
 
                 if ($check){

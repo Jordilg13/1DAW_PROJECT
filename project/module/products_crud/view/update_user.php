@@ -2,9 +2,14 @@
 <p>Product info:</p>
 <form name="formm" method="POST" id="formm">
   <table border="0" cellspacing="5" cellpadding="0">
+  <tr>
+      <td >Product Code</td>
+      <td ><input name="product_code" type="text" id="product_code" value="<?php echo $user['product_code'];?>" readonly></td>
+      <td><span id="e_product_code" class="styerror"></span></td>
+    </tr>
     <tr>
       <td >Product</td>
-      <td ><input name="product" type="text" id="product" value="<?php echo $user['product_name'];?>"readonly></td>
+      <td ><input name="product" type="text" id="product" value="<?php echo $user['product_name'];?>"></td>
       <!-- <td><?php echo @$error[0] ?></td> -->
       <td><span id="e_product" class="styerror"></span></td>
     </tr>

@@ -26,11 +26,11 @@
                     	   	echo '<td width=125>'. $row['brand'] . '</td>';
                     	   	echo '<td width=125>'. $row['product_type'] . '</td>';
                     	   	echo '<td width=350>';
-                    	   	echo '<a class="Button_blue" href="index.php?page=controller_products&op=read&id='.$row['product_name'].'">Read</a>';
+                    	   	echo '<a class="Button_blue" href="index.php?page=controller_products&op=read&id='.$row['product_code'].'">Read</a>';
                     	   	echo '&nbsp;';
-                    	   	echo '<a class="Button_green" href="index.php?page=controller_products&op=update&id='.$row['product_name'].'">Update</a>';
+                    	   	echo '<a class="Button_green" href="index.php?page=controller_products&op=update&id='.$row['product_code'].'">Update</a>';
                     	   	echo '&nbsp;';
-                    	   	echo '<a class="Button_red" href="index.php?page=controller_products&op=delete&id='.$row['product_name'].'">Delete</a>';
+                    	   	echo '<a class="Button_red" href="index.php?page=controller_products&op=delete&id='.$row['product_code'].'">Delete</a>';
                     	   	echo '</td>';
                     	   	echo '</tr>';
                         }
