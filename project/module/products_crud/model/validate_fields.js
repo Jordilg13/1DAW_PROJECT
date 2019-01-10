@@ -93,9 +93,10 @@ function validate_prod(){
 
     if (result) {
         document.formm.submit();
-        document.formm.action="";
+        document.formm.action="index.php?page=controller_products&op=create";
     }
     
+    // document.formm.action="index.php?page=controller_products&op=update";
 	
 
 }

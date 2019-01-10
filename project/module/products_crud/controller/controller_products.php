@@ -23,10 +23,10 @@ switch ($_GET['op']) {
                 
         $check = true;
         if (isset($_POST['product_code'])){
-            $check=validate();
-            
+            $check=validate($_POST['product_code']);
+
             if ($check){
-                $_SESSION['user']=$_POST;
+                // $_SESSION['user']=$_POST;
                 try{
                     $daoprod = new DAOProd();
                     $rdo = $daoprod->insert_prod($_POST);
@@ -43,7 +43,10 @@ switch ($_GET['op']) {
                     $callback = 'index.php?page=503';
                     die('<script>window.location.href="'.$callback .'";</script>');
                 }
-            }
+            } else
+                echo('<script language="javascript">alert("Product already exists.")</script>');
+                $callback = 'index.php?page=controller_products&op=list';
+                die('<script>window.location.href="'.$callback .'";</script>');
         }
         include("module/products_crud/view/products_form.php");
         break;
@@ -68,20 +71,13 @@ switch ($_GET['op']) {
 
         case 'update';
             include("module/products_crud/model/validate.php");
-            // echo("sdf");
             
             $check = true;
-            // echo("post");
-            // debug($_POST);
-            // echo("session");
-            // debug($_SESSION);
-            // echo("get");
-            // debug($_GET);
             if (isset($_POST['product_code'])){
-                $check=validate();
+                // $check=validate();
 
                 if ($check){
-                    $_SESSION['user']=$_POST;
+                    // $_SESSION['user']=$_POST;
                     try{
                         $daoprod = new DAOProd();
                         $rdo = $daoprod->update_prod($_POST);

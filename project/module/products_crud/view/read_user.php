@@ -4,6 +4,14 @@
 
     <table class="table_read">
         <tr class=table_tr>
+            <td class="table_td">Product code: </td>
+            <td class="table_td">
+                <?php
+                    echo $user['product_code'];
+                ?>
+            </td>
+        </tr>
+        <tr class=table_tr>
             <td class="table_td">Product name: </td>
             <td class="table_td">
                 <?php
@@ -58,5 +66,5 @@
         </tr>
     </table>
     </p>
-    <p><a href="index.php?page=contr class=table_troller_products&op=list">Volver</a></p>
+    <p><a href="index.php?page=controller_products&op=list">Volver</a></p>
 </div>

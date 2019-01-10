@@ -14,8 +14,8 @@
 					dateFormat: 'dd/mm/yy', 
 					changeMonth: true, 
 					changeYear: true, 
-					// yearRange: '1900:2100',
-					minDate: 0,
+					yearRange: '1900:2100',
+					minDate: -1000000,
 					// onSelect: function(selectedDate) {
 					//     alert(selectedDate);
 					// }

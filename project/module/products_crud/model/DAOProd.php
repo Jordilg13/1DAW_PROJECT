@@ -1,5 +1,5 @@
 <?php
-include("model/class.php");
+include_once("model/class.php");
 
 class DAOProd{
     function insert_prod($data){
@@ -15,8 +15,8 @@ class DAOProd{
 
         $sql = " INSERT INTO products (product_code, product_name, brand, m_email, state_product, product_type, processor_type, aviable_until)"
             . " VALUES ('$product_code', '$product', '$brand', '$m_email', '$state', '$prod_type', '$type_proc', '$aviable_until_date')";
-        debug($sql);
-        die();
+
+            
         $conexion = Conectar::con();
         $res = mysqli_query($conexion, $sql);
         Conectar::close($conexion);
@@ -32,7 +32,7 @@ class DAOProd{
         return $res;
     }
     
-    function select_prod($prod_code){
+    public static function select_prod($prod_code){
         $sql = "SELECT * FROM products WHERE product_code='$prod_code'";
         $conexion = Conectar::con();
         $res = mysqli_query($conexion, $sql)->fetch_object();
@@ -49,9 +49,6 @@ class DAOProd{
         $state = $data['state'];
         $prod_type = $data['prod_type'];
         $type_proc="";
-        // foreach ($data['type_proc'] as $indice) {
-        //     $type_proc=$type_proc."$indice,";
-        // }
         $type_proc = implode(",",$data['type_proc']);
         $aviable_until_date = $data['aviable_until_date'];
 
@@ -78,7 +75,7 @@ class DAOProd{
     
     function delete_all_products(){
         $sql = "DELETE FROM products";
-        debug($sql);
+        
         $conexion = Conectar::con();
         $res = mysqli_query($conexion, $sql);
         Conectar::close($conexion);

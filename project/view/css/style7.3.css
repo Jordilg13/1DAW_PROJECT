@@ -142,14 +142,15 @@ h1 {
 	background-color:#ffffff;	
 }
 #home_table{
-
-	border-spacing: 5px 10px;
+	border-spacing: 10px;
 }
 #home_table_td{
 	text-align: center;
-	/* width:125px;
-	height:125px; */
 	border: 1px solid red;
 	padding:20px;
-	
+}
+
+#home_table_td:hover{
+	background: #eeeeee;
+
 }
