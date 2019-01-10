@@ -4,7 +4,8 @@
     			<h3>LISTA DE PRODUCTOS</h3>
     	</div>
     	<div class="row">
-    		<p><a href="index.php?page=controller_products&op=create"><img src="view/img/anadir.png"></a></p>
+    		<p><a href="index.php?page=controller_products&op=create"><img src="view/img/anadir.png"></a>
+            <a href="index.php?page=controller_products&op=deleteall"><img src="view/img/delete.png"></a></p>
     		
     		<table>
                 <tr>

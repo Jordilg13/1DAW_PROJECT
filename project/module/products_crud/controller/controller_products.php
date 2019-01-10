@@ -92,7 +92,7 @@ switch ($_GET['op']) {
                     }
                     
 		            if($rdo){
-            			echo '<script language="javascript">alert("Actualizado en la base de datos correctamente")</script>';
+            			echo '<script language="javascript">alert("Product updated sucessfully.")</script>';
             			$callback = 'index.php?page=controller_products&op=list';
         			    die('<script>window.location.href="'.$callback .'";</script>');
             		}else{
@@ -134,7 +134,7 @@ switch ($_GET['op']) {
                 }
                 
                 if($rdo){
-                    echo '<script language="javascript">alert("Borrado en la base de datos correctamente")</script>';
+                    echo '<script language="javascript">alert("Product removed sucesfully.")</script>';
                     $callback = 'index.php?page=controller_products&op=list';
                     die('<script>window.location.href="'.$callback .'";</script>');
                 }else{
@@ -144,6 +144,27 @@ switch ($_GET['op']) {
             }
             
             include("module/products_crud/view/delete_user.php");
+        break;
+        case 'deleteall';
+            if (isset($_POST['delete'])){
+                try{
+                    $daoprod = new DAOProd();
+                    $rdo = $daoprod->delete_all_products();
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+                
+                if($rdo){
+                    echo '<script language="javascript">alert("All products deleted sucesfully.")</script>';
+                    $callback = 'index.php?page=controller_products&op=list';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }else{
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+            }
+            include("module/products_crud/view/delete_all_products.php");
         break;
     default:
         echo("default");

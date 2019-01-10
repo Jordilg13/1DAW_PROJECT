@@ -72,4 +72,13 @@ class DAOProd{
         Conectar::close($conexion);
         return $res;
     }
+    
+    function delete_all_products(){
+        $sql = "DELETE FROM products";
+        debug($sql);
+        $conexion = Conectar::con();
+        $res = mysqli_query($conexion, $sql);
+        Conectar::close($conexion);
+        return $res;
+    }
 }
