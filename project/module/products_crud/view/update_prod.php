@@ -4,24 +4,24 @@
   <table border="0" cellspacing="5" cellpadding="0">
   <tr>
       <td >Product Code</td>
-      <td ><input name="product_code" type="text" id="product_code" value="<?php echo $user['product_code'];?>" readonly></td>
+      <td ><input name="product_code" type="text" id="product_code" value="<?php echo $prod['product_code'];?>" readonly></td>
       <td><span id="e_product_code" class="styerror"></span></td>
     </tr>
     <tr>
       <td >Product</td>
-      <td ><input name="product" type="text" id="product" value="<?php echo $user['product_name'];?>"></td>
+      <td ><input name="product" type="text" id="product" value="<?php echo $prod['product_name'];?>"></td>
       <!-- <td><?php echo @$error[0] ?></td> -->
       <td><span id="e_product" class="styerror"></span></td>
     </tr>
     <tr>
       <td>Brand</td>
-      <td><input name="brand" type="text" id="brand" value="<?php echo $user['brand'];?>"></td>
+      <td><input name="brand" type="text" id="brand" value="<?php echo $prod['brand'];?>"></td>
       <!-- <td><?php echo @$error[1] ?></td> -->
       <td><span id="e_brand" class="styerror"></span></td>
     </tr>
     <tr>
       <td>Manufacturer email</td>
-      <td><input name="m_email" type="text" id="m_email" value="<?php echo $user['m_email'];?>"></td>
+      <td><input name="m_email" type="text" id="m_email" value="<?php echo $prod['m_email'];?>"></td>
       <!-- <td><?php echo @$error[2] ?></td> -->
       <td><span id="e_memail" class="styerror"></span></td>
     </tr>
@@ -29,13 +29,13 @@
       <td>State</td>
       <td><select name="state" id="state" >
         <?php
-            if ($user['state_product'] ==="Aviable") {
+            if ($prod['state_product'] ==="Aviable") {
         ?>
             <option value="Other">Other</option>
             <option value="Aviable" selected>Aviable</option>
             <option value="Unaviable">Unaviable</option>
         <?php
-            }elseif ($user['state_product'] ==="Unaviable") {    
+            }elseif ($prod['state_product'] ==="Unaviable") {    
         ?>
             <option value="Other">Other</option>
             <option value="Aviable" >Aviable</option>
@@ -57,13 +57,13 @@
         <td>Product type</td>
         <td>
             <?php
-                if ($user['product_type'] === "laptop") {
+                if ($prod['product_type'] === "laptop") {
             ?>
                 Laptop<input name="prod_type" type="radio" value="laptop" checked>
                 Computer<input name="prod_type" type="radio" value="computer">
                 Other<input name="prod_type" type="radio" value="other" >
             <?php
-               } elseif ($user['product_type'] === "computer") {
+               } elseif ($prod['product_type'] === "computer") {
             ?>
                 Laptop<input name="prod_type" type="radio" value="laptop" >
                 Computer<input name="prod_type" type="radio" value="computer" checked>
@@ -84,7 +84,7 @@
     <tr>
       <td>Processor type</td>
         <?php
-            $afi=explode(",", $user['processor_type']);
+            $afi=explode(",", $prod['processor_type']);
         ?>
       <td>
         <?php
@@ -148,7 +148,7 @@
             <p><label>Aviable until:</label></p>
         </td>
         <td>
-            <p><input id="demo1" type="text" name="aviable_until_date" value="<?php echo $user['aviable_until'];?>"><?php echo @$error[4] ?></p>
+            <p><input id="demo1" type="text" name="aviable_until_date" value="<?php echo $prod['aviable_until'];?>"><?php echo @$error[4] ?></p>
         </td>
         <td><?php echo @$error[6] ?></td>
         <td><span id="e_aviable_until" class="styerror"></span></td>

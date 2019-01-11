@@ -14,7 +14,7 @@ switch ($_GET['op']) {
             $callback = 'index.php?page=503';
             die('<script>window.location.href="'.$callback .'";</script>');
         }else{
-            include("module/products_crud/view/list_user.php");
+            include("module/products_crud/view/list_prod.php");
         }
         break;
 
@@ -26,7 +26,7 @@ switch ($_GET['op']) {
             $check=validate($_POST['product_code']);
 
             if ($check){
-                // $_SESSION['user']=$_POST;
+                // $_SESSION['prod']=$_POST;
                 try{
                     $daoprod = new DAOProd();
                     $rdo = $daoprod->insert_prod($_POST);
@@ -55,7 +55,7 @@ switch ($_GET['op']) {
         try{
             $daoprod = new DAOProd();
             $rdo = $daoprod->select_prod($_GET['id']);
-            $user=get_object_vars($rdo);
+            $prod=get_object_vars($rdo);
 
         }catch (Exception $e){
             $callback = 'index.php?page=503';
@@ -65,7 +65,7 @@ switch ($_GET['op']) {
             $callback = 'index.php?page=503';
             die('<script>window.location.href="'.$callback .'";</script>');
         }else{
-            include("module/products_crud/view/read_user.php");
+            include("module/products_crud/view/read_prod.php");
         }
         break;
 
@@ -77,7 +77,7 @@ switch ($_GET['op']) {
                 // $check=validate();
 
                 if ($check){
-                    // $_SESSION['user']=$_POST;
+                    // $_SESSION['prod']=$_POST;
                     try{
                         $daoprod = new DAOProd();
                         $rdo = $daoprod->update_prod($_POST);
@@ -102,7 +102,7 @@ switch ($_GET['op']) {
             try{
                 $daoprod = new DAOProd();
             	$rdo = $daoprod->select_prod($_GET['id']);
-                $user=get_object_vars($rdo);
+                $prod=get_object_vars($rdo);
             }catch (Exception $e){
                 // echo('<script>console.log("1_else");</script>');
                 $callback = 'index.php?page=503';
@@ -115,7 +115,7 @@ switch ($_GET['op']) {
     			// die('<script>window.location.href="'.$callback .'";</script>');
     		}else{
                 // echo('<script>console.log("2_else");</script>');
-        	    include("module/products_crud/view/update_user.php");
+        	    include("module/products_crud/view/update_prod.php");
     		}
             break;
 
@@ -139,7 +139,7 @@ switch ($_GET['op']) {
                 }
             }
             
-            include("module/products_crud/view/delete_user.php");
+            include("module/products_crud/view/delete_prod.php");
         break;
         case 'deleteall';
             if (isset($_POST['delete'])){

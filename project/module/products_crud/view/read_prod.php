@@ -7,7 +7,7 @@
             <td class="table_td">Product code: </td>
             <td class="table_td">
                 <?php
-                    echo $user['product_code'];
+                    echo $prod['product_code'];
                 ?>
             </td>
         </tr>
@@ -15,7 +15,7 @@
             <td class="table_td">Product name: </td>
             <td class="table_td">
                 <?php
-                    echo $user['product_name'];
+                    echo $prod['product_name'];
                 ?>
             </td>
         </tr>
@@ -24,7 +24,7 @@
             <td class="table_td">Brand: </td>
             <td class="table_td">
                 <?php
-                    echo $user['brand'];
+                    echo $prod['brand'];
                 ?>
             </td>
         </tr>
@@ -33,7 +33,7 @@
             <td class="table_td">Manufacturer email: </td>
             <td class="table_td">
                 <?php
-                    echo $user['m_email'];
+                    echo $prod['m_email'];
                 ?>
             </td>
         </tr>
@@ -42,7 +42,7 @@
             <td class="table_td">State of product: </td>
             <td class="table_td">
                 <?php
-                    echo $user['state_product'];
+                    echo $prod['state_product'];
                 ?>
             </td>
         </tr>
@@ -51,7 +51,7 @@
             <td class="table_td">Processor type: </td>
             <td class="table_td">
                 <?php
-                    echo $user['processor_type'];
+                    echo $prod['processor_type'];
                 ?>
             </td>
         </tr>
@@ -60,7 +60,7 @@
             <td class="table_td">Aviable until: </td>
             <td class="table_td">
                 <?php
-                    echo $user['aviable_until'];
+                    echo $prod['aviable_until'];
                 ?>
             </td>
         </tr>

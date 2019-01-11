@@ -3,8 +3,8 @@
 		include("module/home/controller/controller_home.php");
 	} else {
 		switch ($_GET['page']) {
-			case 'list_user':
-				include("module/products_crud/view/list_user.php");
+			case 'list_prod':
+				include("module/products_crud/view/list_prod.php");
 				break;
 			case 'controller_products':
 				include("module/products_crud/controller/controller_products.php");

@@ -1,8 +1,8 @@
 <div id="contenido">
-    <form autocomplete="on" method="post" name="delete_user" id="delete_user" action="index.php?page=controller_products&op=delete&id=<?php echo $_GET['id']; ?>">
+    <form autocomplete="on" method="post" name="delete_prod" id="delete_prod" action="index.php?page=controller_products&op=delete&id=<?php echo $_GET['id']; ?>">
         <table border='0'>
             <tr>
-                <td align="center"  colspan="2"><h3>Do you rerally want to delete all products?</h3></td>
+                <td align="center"  colspan="2"><h3>Do you really want to delete all products?</h3></td>
                 
             </tr>
             <tr>
