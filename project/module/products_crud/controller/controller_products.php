@@ -29,7 +29,7 @@ switch ($_GET['op']) {
                 // $_SESSION['prod']=$_POST;
                 try{
                     $daoprod = new DAOProd();
-                    $rdo = $daoprod->insert_prod($_POST);
+                    $rdo = $daoprod->create_prod($_POST);
                 }catch (Exception $e){
                     $callback = 'index.php?page=503';
                     die('<script>window.location.href="'.$callback .'";</script>');
@@ -48,7 +48,7 @@ switch ($_GET['op']) {
                 $callback = 'index.php?page=controller_products&op=list';
                 die('<script>window.location.href="'.$callback .'";</script>');
         }
-        include("module/products_crud/view/products_form.php");
+        include("module/products_crud/view/create_prod.php");
         break;
 
     case 'read':

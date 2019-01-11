@@ -21,7 +21,7 @@ function validaemail(email) {
     return false;
 }
 
-function validate_prod(){
+function validate_prod(option){
     var result = true;
 
     var code = document.getElementById('product_code').value;
@@ -93,10 +93,9 @@ function validate_prod(){
 
     if (result) {
         document.formm.submit();
-        document.formm.action="index.php?page=controller_products&op=create";
+        document.formm.action="index.php?page=controller_products&op="+option;
     }
     
-    // document.formm.action="index.php?page=controller_products&op=update";
 	
 
 }

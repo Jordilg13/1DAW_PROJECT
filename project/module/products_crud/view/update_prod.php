@@ -4,30 +4,35 @@
   <table border="0" cellspacing="5" cellpadding="0">
   <tr>
       <td >Product Code</td>
-      <td ><input name="product_code" type="text" id="product_code" value="<?php echo $prod['product_code'];?>" readonly></td>
+      <td ><input name="product_code" type="text" id="product_code" class="form-control" value="<?php echo $prod['product_code'];?>" readonly></td>
       <td><span id="e_product_code" class="styerror"></span></td>
     </tr>
     <tr>
       <td >Product</td>
-      <td ><input name="product" type="text" id="product" value="<?php echo $prod['product_name'];?>"></td>
+      <td ><input name="product" type="text" id="product" class="form-control" value="<?php echo $prod['product_name'];?>"></td>
       <!-- <td><?php echo @$error[0] ?></td> -->
       <td><span id="e_product" class="styerror"></span></td>
     </tr>
     <tr>
       <td>Brand</td>
-      <td><input name="brand" type="text" id="brand" value="<?php echo $prod['brand'];?>"></td>
+      <td><input name="brand" type="text" id="brand" class="form-control" value="<?php echo $prod['brand'];?>"></td>
       <!-- <td><?php echo @$error[1] ?></td> -->
       <td><span id="e_brand" class="styerror"></span></td>
     </tr>
     <tr>
       <td>Manufacturer email</td>
-      <td><input name="m_email" type="text" id="m_email" value="<?php echo $prod['m_email'];?>"></td>
+      <td><input name="m_email" type="text" id="m_email" class="form-control" value="<?php echo $prod['m_email'];?>"></td>
       <!-- <td><?php echo @$error[2] ?></td> -->
       <td><span id="e_memail" class="styerror"></span></td>
     </tr>
     <tr>
+      <td >Price</td>
+      <td ><input name="product_price" type="text" id="product_price" value="<?php echo $prod['price'];?>" class="form-control"></td>
+      <td><span id="product_price" class="styerror"></span></td>
+    </tr>
+    <tr>
       <td>State</td>
-      <td><select name="state" id="state" >
+      <td><select name="state" id="state" class="form-control">
         <?php
             if ($prod['state_product'] ==="Aviable") {
         ?>
@@ -148,14 +153,14 @@
             <p><label>Aviable until:</label></p>
         </td>
         <td>
-            <p><input id="demo1" type="text" name="aviable_until_date" value="<?php echo $prod['aviable_until'];?>"><?php echo @$error[4] ?></p>
+            <p><input id="demo1" type="text" name="aviable_until_date" class="form-control" value="<?php echo $prod['aviable_until'];?>"><?php echo @$error[4] ?></p>
         </td>
         <td><?php echo @$error[6] ?></td>
         <td><span id="e_aviable_until" class="styerror"></span></td>
     </tr>
     
     <tr>
-      <td><input name="Submit" type="button" value="Update" onclick="validate_prod()" /></td>
+      <td><input name="Submit" type="button" value="Update" onclick="validate_prod('update')" /></td>
       <td>&nbsp;</td>
     </tr>
   </table>

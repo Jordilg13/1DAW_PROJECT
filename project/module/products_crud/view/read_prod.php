@@ -37,6 +37,14 @@
                 ?>
             </td>
         </tr>
+        <tr class=table_tr>
+            <td class="table_td">Price: </td>
+            <td class="table_td">
+                <?php
+                    echo $prod['price'];
+                ?>
+            </td>
+        </tr>
         
         <tr class=table_tr>
             <td class="table_td">State of product: </td>

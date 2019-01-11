@@ -2,19 +2,21 @@
 include_once("model/class.php");
 
 class DAOProd{
-    function insert_prod($data){
+    function create_prod($data){
+
         $product_code = $data['product_code'];
         $product = $data['product'];
         $brand = $data['brand'];
         $m_email = $data['m_email'];
+        $price = $data['product_price'];
         $state = $data['state'];
         $prod_type = $data['prod_type'];
         $type_proc="";
         $type_proc = implode(",",$data['type_proc']);
         $aviable_until_date = $data['aviable_until_date'];
 
-        $sql = " INSERT INTO products (product_code, product_name, brand, m_email, state_product, product_type, processor_type, aviable_until)"
-            . " VALUES ('$product_code', '$product', '$brand', '$m_email', '$state', '$prod_type', '$type_proc', '$aviable_until_date')";
+        $sql = " INSERT INTO products (product_code, product_name, brand, m_email, price, state_product, product_type, processor_type, aviable_until)"
+            . " VALUES ('$product_code', '$product', '$brand', '$m_email', '$price', '$state', '$prod_type', '$type_proc', '$aviable_until_date')";
 
             
         $conexion = Conectar::con();
@@ -46,6 +48,7 @@ class DAOProd{
         $product = $data['product'];
         $brand = $data['brand'];
         $m_email = $data['m_email'];
+        $price = $data['product_price'];
         $state = $data['state'];
         $prod_type = $data['prod_type'];
         $type_proc="";
@@ -53,7 +56,7 @@ class DAOProd{
         $aviable_until_date = $data['aviable_until_date'];
 
         $sql = " UPDATE products".
-        " SET product_name='$product', brand='$brand', m_email='$m_email', state_product='$state', product_type='$prod_type', processor_type='$type_proc',".
+        " SET product_name='$product', brand='$brand', m_email='$m_email', price='$price', state_product='$state', product_type='$prod_type', processor_type='$type_proc',".
         " aviable_until='$aviable_until_date'".
         " WHERE product_code='$product_code'";
         

@@ -11,7 +11,7 @@
                 <tr>
                     <td width=125><b>Product</b></th>
                     <td width=125><b>Brand</b></th>
-                    <td width=125><b>Type</b></th>
+                    <td width=125><b>Price</b></th>
                     <th width=350><b>Action</b></th>
                 </tr>
                 <?php
@@ -24,7 +24,7 @@
                        		echo '<tr>';
                     	   	echo '<td width=125>'. $row['product_name'] . '</td>';
                     	   	echo '<td width=125>'. $row['brand'] . '</td>';
-                    	   	echo '<td width=125>'. $row['product_type'] . '</td>';
+                    	   	echo '<td width=125>'. $row['price'] . '</td>';
                     	   	echo '<td width=350>';
                     	   	echo '<a class="Button_blue" href="index.php?page=controller_products&op=read&id='.$row['product_code'].'">Read</a>';
                     	   	echo '&nbsp;';
