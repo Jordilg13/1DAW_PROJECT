@@ -34,6 +34,7 @@ Number of products:
                 'tab' => "tablet.png",
                 'tab2' => "tablet2.jpg",
             );
+            //pretty home product(copypaste)
             $template_prod = '
             <div class="col-md-3 col-sm-6">
                             <div class="product-grid6">

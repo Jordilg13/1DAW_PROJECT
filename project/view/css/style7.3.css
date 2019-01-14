@@ -55,7 +55,7 @@ body {
 	height: 130px;
 	color: #FFFFFF;
 	text-align: center;
-	background-image: url(../img/footer.png);
+	/* background-image: url(../img/footer.png); */
 }
 
 h1 {
@@ -176,6 +176,10 @@ h1 {
 	background: #eeeeee;
 
 }  */
+
+.container {
+	max-width: 800px;
+}
 
 /* copy-paste */
 
@@ -333,3 +337,8 @@ h1 {
 }
 
 /* end copy-paste2 */
+
+
+hr.hr_footer{
+	border: 1px solid red;
+}
