@@ -1,5 +1,6 @@
 <?php
-include_once("model/class.php");
+$path = $_SERVER['DOCUMENT_ROOT'] . "/project/";
+include_once($path."model/class.php");
 
 class DAOProd{
     function create_prod($data){
@@ -13,10 +14,10 @@ class DAOProd{
         $prod_type = $data['prod_type'];
         $type_proc="";
         $type_proc = implode(",",$data['type_proc']);
-        $aviable_until_date = $data['aviable_until_date'];
+        $available_until_date = $data['available_until_date'];
 
-        $sql = " INSERT INTO products (product_code, product_name, brand, m_email, price, state_product, product_type, processor_type, aviable_until)"
-            . " VALUES ('$product_code', '$product', '$brand', '$m_email', '$price', '$state', '$prod_type', '$type_proc', '$aviable_until_date')";
+        $sql = " INSERT INTO products (product_code, product_name, brand, m_email, price, state_product, product_type, processor_type, available_until)"
+            . " VALUES ('$product_code', '$product', '$brand', '$m_email', '$price', '$state', '$prod_type', '$type_proc', '$available_until_date')";
 
             
         $conexion = Conectar::con();
@@ -53,11 +54,11 @@ class DAOProd{
         $prod_type = $data['prod_type'];
         $type_proc="";
         $type_proc = implode(",",$data['type_proc']);
-        $aviable_until_date = $data['aviable_until_date'];
+        $available_until_date = $data['available_until_date'];
 
         $sql = " UPDATE products".
         " SET product_name='$product', brand='$brand', m_email='$m_email', price='$price', state_product='$state', product_type='$prod_type', processor_type='$type_proc',".
-        " aviable_until='$aviable_until_date'".
+        " available_until='$available_until_date'".
         " WHERE product_code='$product_code'";
         
       

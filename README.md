@@ -1,4 +1,4 @@
-# PHP_OO_MVC
+# PHP_OO_MVC_JQuery
 
 1DAW PROJECT
 Jordi Llopis Garcia

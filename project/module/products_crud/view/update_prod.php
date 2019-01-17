@@ -34,23 +34,23 @@
       <td>State</td>
       <td><select name="state" id="state" class="form-control">
         <?php
-            if ($prod['state_product'] ==="Aviable") {
+            if ($prod['state_product'] ==="Available") {
         ?>
             <option value="Other">Other</option>
-            <option value="Aviable" selected>Aviable</option>
-            <option value="Unaviable">Unaviable</option>
+            <option value="Available" selected>Available</option>
+            <option value="Unavailable">Unavailable</option>
         <?php
-            }elseif ($prod['state_product'] ==="Unaviable") {    
+            }elseif ($prod['state_product'] ==="Unavailable") {    
         ?>
             <option value="Other">Other</option>
-            <option value="Aviable" >Aviable</option>
-            <option value="Unaviable" selected>Unaviable</option>
+            <option value="Available" >Available</option>
+            <option value="Unavailable" selected>Unavailable</option>
         <?php
             }else{    
         ?>
             <option value="Other" selected>Other</option>
-            <option value="Aviable" >Aviable</option>
-            <option value="Unaviable">Unaviable</option>
+            <option value="Available" >Available</option>
+            <option value="Unavailable">Unavailable</option>
         <?php
             }
         ?>
@@ -150,13 +150,13 @@
     </tr>
     <tr>
         <td>
-            <p><label>Aviable until:</label></p>
+            <p><label>Available until:</label></p>
         </td>
         <td>
-            <p><input id="demo1" type="text" name="aviable_until_date" class="form-control" value="<?php echo $prod['aviable_until'];?>"><?php echo @$error[4] ?></p>
+            <p><input id="demo1" type="text" name="available_until_date" class="form-control" value="<?php echo $prod['available_until'];?>"><?php echo @$error[4] ?></p>
         </td>
         <td><?php echo @$error[6] ?></td>
-        <td><span id="e_aviable_until" class="styerror"></span></td>
+        <td><span id="e_available_until" class="styerror"></span></td>
     </tr>
     
     <tr>

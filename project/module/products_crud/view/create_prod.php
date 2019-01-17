@@ -34,8 +34,8 @@
       <td>State</td>
       <td><select name="state" id="state" class="form-control">
         <option value="Other">Other</option>
-        <option value="Aviable">Aviable</option>
-        <option value="Unaviable">Unaviable</option>
+        <option value="Available">Available</option>
+        <option value="Unavailable">Unavailable</option>
       </select></td>
       <td><?php echo @$error[3] ?></td>
       <td><span id="e_state" class="styerror"></span></td>
@@ -62,12 +62,12 @@
     </tr>
     <tr>
         <td>
-            <p><label>Aviable until:</label></p>
+            <p><label>Available until:</label></p>
         </td>
         <td>
-            <p><input id="demo1" type="text" name="aviable_until_date" readonly class="form-control"><?php echo @$error[4] ?></p>
+            <p><input id="demo1" type="text" name="available_until_date" readonly class="form-control"><?php echo @$error[4] ?></p>
         </td>
-        <td><span id="e_aviable_until" class="styerror"></span></td>
+        <td><span id="e_available_until" class="styerror"></span></td>
         <td><?php echo @$error[6] ?></td>
     </tr>
     

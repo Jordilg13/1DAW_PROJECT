@@ -1,5 +1,6 @@
 <?php
-include("module/products_crud/model/DAOProd.php");
+$path = $_SERVER['DOCUMENT_ROOT'] . "/project/";
+include($path . "module/products_crud/model/DAOProd.php");
 switch ($_GET['op']) {
     case 'list':
         try {
@@ -161,6 +162,23 @@ switch ($_GET['op']) {
                 }
             }
             include("module/products_crud/view/delete_all_products.php");
+        break;
+        case 'read_modal':
+            try {
+                $daoprod = new DAOProd();
+                $rt = $daoprod->select_prod($_GET['modal']);
+            } catch (Exception $e) {
+                echo json_encode("error");
+                exit;
+            }
+            if (!$rt) {
+                echo json_encode("error");
+                exit;
+            } else {
+                $prod = get_object_vars($rt);
+                echo json_encode($prod);
+                exit;
+            }
         break;
     default:
         echo("default");

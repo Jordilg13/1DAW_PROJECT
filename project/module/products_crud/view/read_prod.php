@@ -65,10 +65,10 @@
         </tr>
         
         <tr class=table_tr>
-            <td class="table_td">Aviable until: </td>
+            <td class="table_td">Available until: </td>
             <td class="table_td">
                 <?php
-                    echo $prod['aviable_until'];
+                    echo $prod['available_until'];
                 ?>
             </td>
         </tr>

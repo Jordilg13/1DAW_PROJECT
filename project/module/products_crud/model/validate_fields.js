@@ -79,14 +79,14 @@ function validate_prod(option){
     } else 
         document.getElementById('e_type_proc').innerHTML = "";
     
-    //aviable until
+    //available until
     console.log(document.getElementById('demo1').value);
     if (document.getElementById('demo1').value == "") {
-        document.getElementById('e_aviable_until').innerHTML = "Select a day.";
+        document.getElementById('e_available_until').innerHTML = "Select a day.";
         result = false;
     }
     else 
-        document.getElementById('e_aviable_until').innerHTML = "";
+        document.getElementById('e_available_until').innerHTML = "";
 
 
     console.log("fin validacio js: "+result);
@@ -95,7 +95,111 @@ function validate_prod(option){
         document.formm.submit();
         document.formm.action="index.php?page=controller_products&op="+option;
     }
-    
-	
-
 }
+
+$(document).ready(function () {
+    $('.prod').on("click", function () {
+        var id = this.getAttribute('id');
+        //alert(id);
+        $.ajax({ 
+            type: 'GET', 
+            url: 'module/products_crud/controller/controller_products.php?op=read_modal&modal=' + id, 
+            dataType: 'json',
+            success: function (data) {
+                console.log("success");
+                // console.log(data);
+                
+                if(data === 'error') {
+                    //console.log(data);
+                    //pintar 503
+                    window.location.href='index.php?page=503';
+                }else{
+                    console.log(data);
+                    // throw 'raulet';
+                    $("#p_code").html(data.product_code);
+                    $("#p_name").html(data.product_name);
+                    $("#p_brand").html(data.brand);
+                    $("#p_memail").html(data.m_email);
+                    $("#p_price").html(data.price);
+                    $("#p_state").html(data.state_product);
+                    $("#p_processor").html(data.processor_type);
+                    $("#p_availableuntil").html(data.available_until);
+         
+                    $("#details_prod").show();
+                    $("#prod_modal").dialog({
+                        width: 850, //<!-- ------------- ancho de la ventana -->
+                        height: 500, //<!--  ------------- altura de la ventana -->
+                        // show: "scale", //<!-- ----------- animación de la ventana al aparecer -->
+                        // hide: "scale", //<!-- ----------- animación al cerrar la ventana -->
+                        resizable: "false", //<!-- ------ fija o redimensionable si ponemos este valor a "true" -->
+                        //position: "down",<!--  ------ posicion de la ventana en la pantalla (left, top, right...) -->
+                        modal: "true", //<!-- ------------ si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+                        buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        show: {
+                            effect: "blind",
+                            duration: 250
+                        },
+                        hide: {
+                            effect: "blind",
+                            duration: 250
+                        }
+                    });
+                }//end-else
+            },
+            error: function(data){
+                console.log("error");
+                console.log(data);
+            }
+        });
+
+        // $.get("module/user/controller/controller_user.php?op=read_modal&modal=" + id, function (data, status) {
+        //     var json = JSON.parse(data);
+        //     console.log(json);
+            
+        //     if(json === 'error') {
+        //         //console.log(json);
+        //         //pintar 503
+        //         window.location.href='index.php?page=503';
+        //     }else{
+        //         console.log(json.user);
+        //         $("#user1").html(json.user);
+        //         $("#pass").html(json.pass);
+        //         $("#name").html(json.name);
+        //         $("#language").html(json.language);
+        //         $("#sex").html(json.sex);
+        //         $("#dni").html(json.dni);
+        //         $("#birthdate").html(json.birthdate);
+        //         $("#country").html(json.country);
+        //         $("#hobby").html(json.hobby);
+     
+        //         $("#details_user").show();
+        //         $("#user_modal").dialog({
+        //             width: 850, //<!-- ------------- ancho de la ventana -->
+        //             height: 500, //<!--  ------------- altura de la ventana -->
+        //             //show: "scale", <!-- ----------- animación de la ventana al aparecer -->
+        //             //hide: "scale", <!-- ----------- animación al cerrar la ventana -->
+        //             resizable: "false", //<!-- ------ fija o redimensionable si ponemos este valor a "true" -->
+        //             //position: "down",<!--  ------ posicion de la ventana en la pantalla (left, top, right...) -->
+        //             modal: "true", //<!-- ------------ si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+        //             buttons: {
+        //                 Ok: function () {
+        //                     $(this).dialog("close");
+        //                 }
+        //             },
+        //             show: {
+        //                 effect: "blind",
+        //                 duration: 1000
+        //             },
+        //             hide: {
+        //                 effect: "explode",
+        //                 duration: 1000
+        //             }
+        //         });
+        //     }//end-else
+        // });
+    });
+});

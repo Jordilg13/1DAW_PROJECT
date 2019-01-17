@@ -64,9 +64,6 @@ Number of products:
                 foreach ($rt as $row) {
                     $i++;
                     echo ('<td>');
-                    //     '<b>' . $row['product_name'] . '</b>' . '<br>' . '<br>' .
-                    //     $row['brand'] . '<br>' . '<br>' .
-                    //     $row['aviable_until'] .
                     echo sprintf($template_prod, $row['product_code'], $images[array_rand($images)], $row['product_name'], $row['price'], $row['price'] + 30, "");
                     echo('</td>');
                     if ($i % 2 == 0) {
