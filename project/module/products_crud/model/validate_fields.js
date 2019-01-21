@@ -98,9 +98,24 @@ function validate_prod(option){
 }
 
 $(document).ready(function () {
+
+    $('#table_crud').DataTable();
+    // $('#table_crud').jqxDataTable({
+    //     altRows: true,
+    //     sortable: true,
+    //     columns: [
+    //       { text: 'Product', dataField: 'Product', width: 125 },
+    //       { text: 'Brand', dataField: 'Brand', width: 125 },
+    //       { text: 'Price', dataField: 'Price', width: 125 },
+    //       { text: 'Action', dataField: 'Action', width: 350, align: 'right', cellsAlign: 'right', cellsFormat: 'c2' },
+    //     ]
+    // });
     $('.prod').on("click", function () {
         var id = this.getAttribute('id');
         //alert(id);
+
+        //request to obtain the product info
+        //if succes: print modal
         $.ajax({ 
             type: 'GET', 
             url: 'module/products_crud/controller/controller_products.php?op=read_modal&modal=' + id, 

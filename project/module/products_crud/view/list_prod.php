@@ -7,13 +7,16 @@
     		<p><a href="index.php?page=controller_products&op=create"><img src="view/img/anadir.png"></a>
             <a href="index.php?page=controller_products&op=deleteall"><img src="view/img/delete.png"></a></p>
     		
-    		<table>
+    		<table id="table_crud">
+            <thead>
                 <tr>
                     <td width=125><b>Product</b></th>
                     <td width=125><b>Brand</b></th>
                     <td width=125><b>Price</b></th>
                     <th width=350><b>Action</b></th>
                 </tr>
+            </thead>
+            <tbody>
                 <?php
                     if ($rdo->num_rows === 0){
                         echo '<tr>';
@@ -26,9 +29,7 @@
                     	   	echo '<td width=125>'. $row['brand'] . '</td>';
                     	   	echo '<td width=125>'. $row['price'] . '</td>';
                             echo '<td width=350>';
-                               
-                            // print ("<div class='prod' id='".$row['user']."'>Read</div>");  //READ
-                            // echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                            
                             echo '<a class="Button_blue prod" id='.$row['product_code'].'>Modal</a>';
                     	   	echo '&nbsp;';
 
@@ -42,6 +43,7 @@
                         }
                     }
                 ?>
+                </tbody>
             </table>
     	</div>
     </div>
