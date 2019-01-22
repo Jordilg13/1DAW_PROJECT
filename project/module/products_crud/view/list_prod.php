@@ -10,9 +10,9 @@
     		<table id="table_crud">
             <thead>
                 <tr>
-                    <td width=125><b>Product</b></th>
-                    <td width=125><b>Brand</b></th>
-                    <td width=125><b>Price</b></th>
+                    <th width=125><b>Product</b></th>
+                    <th width=125><b>Brand</b></th>
+                    <th width=125><b>Price</b></th>
                     <th width=350><b>Action</b></th>
                 </tr>
             </thead>

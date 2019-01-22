@@ -3,6 +3,8 @@ include "debug.php";
 
 if ((isset($_GET['page'])) && ($_GET['page']==="controller_products")) {
     include("view/inc/top_page_products.php");
+} else if ((isset($_GET['page'])) && ($_GET['page']==="jqdatatable")){
+    include("view/inc/top_page_jq.php");
 } else {
     include("view/inc/top_page.php");
 }

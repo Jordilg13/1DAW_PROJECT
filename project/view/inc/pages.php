@@ -3,6 +3,9 @@
 		include("module/home/controller/controller_home.php");
 	} else {
 		switch ($_GET['page']) {
+			case 'jqdatatable':
+				include("module/JQdatatable/controller/JQcontroller.php");
+				break;
 			case 'list_prod':
 				include("module/products_crud/view/list_prod.php");
 				break;

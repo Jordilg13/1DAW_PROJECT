@@ -6,7 +6,7 @@
 	<link href="view/css/style7.3.css" rel="stylesheet" type="text/css" />	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="https://jqwidgets.com/public/jqwidgets/jqx-all.js" />
+	<!-- <link rel="stylesheet" href="https://jqwidgets.com/public/jqwidgets/jqx-all.js" /> -->
 	<link rel="stylesheet" href="../../jqwidgets/styles/jqx.base.css" type="text/css" />
 	
 	<!-- dataTables -->
@@ -23,5 +23,20 @@
   	<link rel="stylesheet" href="/resources/demos/style.css">
 	<script type="text/javascript" src="module/home/model/num_products.js"></script>
 	<script type="text/javascript" src="view/js/lang.js"></script>
+
+
+	<!-- jqwidgets -->
+	<link rel="stylesheet" href="view/js/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+	<script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxdata.js"></script> 
+    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxdatatable.js"></script> 
+    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+    <!-- <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxlistbox.js"></script> -->
+    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="view/js/jqwidgets/scripts/demos.js"></script>
+
+<!-- TODO: organitzar imports -->
 </head>
 <body>
