@@ -18,12 +18,15 @@
 			<div class="collapse navbar-collapse navbar-toggle " id="navbarNavAltMarkup">
 				<ul class="navbar-nav mx-xl-auto">
 					<li>
-						<a class="nav-link text-uppercase active" href="index.php" data-tr="Homepage">Homepage</a>
+						<a class="nav-link text-uppercase" id="home_button" href="index.php" data-tr="Homepage">Homepage</a>
 					</li>
 					<li>
-						<a class="nav-link text-uppercase" href="index.php?page=controller_products&op=list" data-tr="Products">Products</a>
+						<a class="nav-link text-uppercase" id="controller_products" href="index.php?page=controller_products&op=list" data-tr="Products">Products</a>
 					</li>
-					<li class="nav-item dropdown">
+					<li>
+						<a class="nav-link text-uppercase" id="contact_us" href="index.php?page=contact_us" data-tr="Contact Us">Contact Us</a>
+					</li>
+					<!-- <li class="nav-item dropd	own">
 						<a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 						    aria-expanded="false">Pages
 							<i class="fas fa-caret-down"></i>
@@ -37,9 +40,9 @@
 							<a class="dropdown-item" href="gallery.html">Gallery</a>
 							<a class="dropdown-item" href="single.html">Some More</a>
 						</div>
-					</li>
+					</li> -->
 					<li>
-						<a class="nav-link text-uppercase" href="contact.html">Contact Us</a>
+						<a class="nav-link text-uppercase" id="likes_controller" href="index.php?page=likes_controller&op=list" data-tr="Likes">Likes</a>
 					</li>
 				</ul>
 				<div class="top-info text-lg-right text-center mt-lg-0 mt-3">

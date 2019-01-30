@@ -8,27 +8,22 @@
 	<!-- <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
 
 	<link href="view/css/style7.3.css" rel="stylesheet" type="text/css" />	
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
-	<!-- <link rel="stylesheet" href="https://jqwidgets.com/public/jqwidgets/jqx-all.js" />
-	<link rel="stylesheet" href="https://jqwidgets.com/public/jqwidgets/styles/jqx.base.css" /> -->
-
-	<!-- dataTables -->
-	<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" /> -->
-	
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+	<!-- <link rel="stylesheet" href="https://jqwidgets.com/public/jqwidgets/jqx-all.js" /> -->
+	<!-- <link rel="stylesheet" href="https://jqwidgets.com/public/jqwidgets/styles/jqx.base.css" />  -->
+	<!-- dataTables -->	
 	<!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script> -->
 
 	<!-- datatables ejer4 -->
 	
-	<!-- <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" /> -->
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
 
 
-	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   	<!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-  	<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
-	  
-•
+  	<link rel="stylesheet" href="/resources/demos/style.css">
 
 	  
 	  <!-- <script type="text/javascript" src="view/js/lang.js"></script>
@@ -104,27 +99,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     
 <!-- //template -->
 
-<!-- jqwidgets -->
-<link rel="stylesheet" href="view/js/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-	<script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxdata.js"></script> 
-    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxdatatable.js"></script> 
-    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxcheckbox.js"></script>
-    <!-- <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxlistbox.js"></script> -->
-    <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="view/js/jqwidgets/scripts/demos.js"></script>
-
     <script type="text/javascript" src="module/home/model/num_products.js"></script>
     <script type="text/javascript" src="view/js/lang.js"></script>
     
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="view/css/style.css">
 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
+	<!-- normal datatable -->
+	<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	
+
+	<!--  -->
 	<script type="text/javascript" src="view/js/lang.js"></script>
 	  <script type="text/javascript">
         	$(function() {
@@ -141,8 +127,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 	    </script>
 	<script type="text/javascript" src="module/products_crud/model/validate_fields.js"></script>
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<link href="view/css/style7.3.css" rel="stylesheet" type="text/css" />	
+	<script type="text/javascript" src="view/js/menu.js"></script>
+	<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+	<!-- <link href="view/css/style7.3.css" rel="stylesheet" type="text/css" />	 -->
 
 
 </head>
+<body>
+<div class="inner-banner-w3ls">
+    <div class="container">
+        <!-- page details -->
+        <div class="breadcrumb-agile">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <!-- <li class="breadcrumb-item">
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page"><? echo $_GET['page'] ?></li> -->
+                </ol>
+            </div>
+        </div>
+            <!-- //page details -->
+    </div>
+</div>

@@ -37,7 +37,9 @@
                     	   	echo '&nbsp;';
                     	   	echo '<a class="Button_green" href="index.php?page=controller_products&op=update&id='.$row['product_code'].'">Update</a>';
                     	   	echo '&nbsp;';
-                    	   	echo '<a class="Button_red" href="index.php?page=controller_products&op=delete&id='.$row['product_code'].'">Delete</a>';
+                            echo '<a class="Button_red" href="index.php?page=controller_products&op=delete&id='.$row['product_code'].'">Delete</a>';
+                            echo '&nbsp;';
+                    	   	echo '<a class="Button_white like" id="'.$row['product_code'].'">❤</a>';
                     	   	echo '</td>';
                     	   	echo '</tr>';
                         }
@@ -50,18 +52,42 @@
 </div>
 
 <!-- modal window -->
-<section id="prod_modal">
-    <div id="details_prod" hidden>
+<section id="prod_modal" >
+    <div id="details_prod"  >
         <div id="details">
             <div id="container">
-                Product code: <div id="p_code"></div></br>
-                Product name: <div id="p_name"></div></br>
-                Brand: <div id="p_brand"></div></br>
-                Manufacturer email: <div id="p_memail"></div></br>
-                Price: <div id="p_price"></div></br>
-                State of product: <div id="p_state"></div></br>
-                Processor type <div id="p_processor"></div></br>
-                Available until: <div id="p_availableuntil"></div></br>
+                <div class="row">
+                    <div class="col-md-2">Product code: </div>
+                    <div id="p_code" class="col-md-10"></div></br>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Product name: </div>
+                    <div id="p_name" class="col-md-10"></div></br>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Brand: </div>
+                    <div id="p_brand" class="col-md-10"></div></br>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Manufacturer email: </div>
+                    <div id="p_memail" class="col-md-10"></div></br>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Price: </div>
+                    <div id="p_price" class="col-md-10"></div></br>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">State of product: </div>
+                    <div id="p_state" class="col-md-10"></div></br>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Processor type: </div>
+                    <div id="p_processor" class="col-md-10"></div></br>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Available until: </div>
+                    <div id="p_availableuntil" class="col-md-10"></div></br>
+                </div>
             </div>
         </div>
     </div>

@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+    // -----------------
+    // -- jqdatatable --
+    // -----------------
     var url = "module/likes/controller/likes_controller.php?op=datatable";  
     // prepare the data
     var source =
@@ -6,9 +10,8 @@ $(document).ready(function () {
         dataType: "json",
         // dataType: "array",
         dataFields: [
-            { name: 'product_name', type: 'string' },
-            { name: 'brand', type: 'string' },
-            { name: 'price', type: 'number' },
+            { name: 'user_l', type: 'string' },
+            { name: 'product_code', type: 'string' },
             // { name: 'Action', type: 'string' }
         ],
         id: 'id',
@@ -29,12 +32,14 @@ $(document).ready(function () {
         theme: "metro",
         pagerMode: 'advanced',
         columns: [
-            { text: 'Product', dataField: 'product_name'},
-            { text: 'Brand', dataField: 'brand'},
-            { text: 'Price', dataField: 'price'},
+            { text: 'User', dataField: 'user_l'},
+            { text: 'Product', dataField: 'product_code'},
             // { text: 'Action', dataField: 'Action'},
           ]
     });  
+
+    
+    
 });
 
 

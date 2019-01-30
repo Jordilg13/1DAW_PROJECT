@@ -98,7 +98,7 @@ function validate_prod(option){
 }
 
 $(document).ready(function () {
-
+    $("#details").hide(); //hidden fails
     $('#table_crud').DataTable();
     // $('#table_crud').jqxDataTable({
     //     altRows: true,
@@ -110,6 +110,24 @@ $(document).ready(function () {
     //       { text: 'Action', dataField: 'Action', width: 350, align: 'right', cellsAlign: 'right', cellsFormat: 'c2' },
     //     ]
     // });
+    $(".like").on("click", function (like_btn) {
+        var id_arr = {"id": this.id};
+        $.ajax({ 
+            type: 'POST', 
+            url: 'module/likes/controller/likes_controller.php?op=toggle_like', 
+            data: id_arr,
+            success: function (data) {
+                console.log(data);
+                if (data == "added") {      
+                    $(like_btn).removeClass('Button_white');
+                    $(like_btn).addClass('Button_red');
+                } else {
+                    $(like_btn).removeClass('Button_red');
+                    $(like_btn).addClass('Button_white');
+                }
+            }
+    });
+});
     $('.prod').on("click", function () {
         var id = this.getAttribute('id');
         //alert(id);
@@ -130,7 +148,7 @@ $(document).ready(function () {
                     window.location.href='index.php?page=503';
                 }else{
                     console.log(data);
-                    // throw 'raulet';
+                    
                     $("#p_code").html(data.product_code);
                     $("#p_name").html(data.product_name);
                     $("#p_brand").html(data.brand);
@@ -140,14 +158,14 @@ $(document).ready(function () {
                     $("#p_processor").html(data.processor_type);
                     $("#p_availableuntil").html(data.available_until);
          
-                    $("#details_prod").show();
+                    $("#details").show();
                     $("#prod_modal").dialog({
                         width: 850, //<!-- ------------- ancho de la ventana -->
                         height: 500, //<!--  ------------- altura de la ventana -->
                         // show: "scale", //<!-- ----------- animación de la ventana al aparecer -->
                         // hide: "scale", //<!-- ----------- animación al cerrar la ventana -->
                         resizable: "false", //<!-- ------ fija o redimensionable si ponemos este valor a "true" -->
-                        //position: "down",<!--  ------ posicion de la ventana en la pantalla (left, top, right...) -->
+                        // position: "top", //<!--  ------ posicion de la ventana en la pantalla (left, top, right...) -->
                         modal: "true", //<!-- ------------ si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
                         buttons: {
                             Ok: function () {
@@ -170,51 +188,5 @@ $(document).ready(function () {
                 console.log(data);
             }
         });
-
-        // $.get("module/user/controller/controller_user.php?op=read_modal&modal=" + id, function (data, status) {
-        //     var json = JSON.parse(data);
-        //     console.log(json);
-            
-        //     if(json === 'error') {
-        //         //console.log(json);
-        //         //pintar 503
-        //         window.location.href='index.php?page=503';
-        //     }else{
-        //         console.log(json.user);
-        //         $("#user1").html(json.user);
-        //         $("#pass").html(json.pass);
-        //         $("#name").html(json.name);
-        //         $("#language").html(json.language);
-        //         $("#sex").html(json.sex);
-        //         $("#dni").html(json.dni);
-        //         $("#birthdate").html(json.birthdate);
-        //         $("#country").html(json.country);
-        //         $("#hobby").html(json.hobby);
-     
-        //         $("#details_user").show();
-        //         $("#user_modal").dialog({
-        //             width: 850, //<!-- ------------- ancho de la ventana -->
-        //             height: 500, //<!--  ------------- altura de la ventana -->
-        //             //show: "scale", <!-- ----------- animación de la ventana al aparecer -->
-        //             //hide: "scale", <!-- ----------- animación al cerrar la ventana -->
-        //             resizable: "false", //<!-- ------ fija o redimensionable si ponemos este valor a "true" -->
-        //             //position: "down",<!--  ------ posicion de la ventana en la pantalla (left, top, right...) -->
-        //             modal: "true", //<!-- ------------ si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
-        //             buttons: {
-        //                 Ok: function () {
-        //                     $(this).dialog("close");
-        //                 }
-        //             },
-        //             show: {
-        //                 effect: "blind",
-        //                 duration: 1000
-        //             },
-        //             hide: {
-        //                 effect: "explode",
-        //                 duration: 1000
-        //             }
-        //         });
-        //     }//end-else
-        // });
     });
 });

@@ -3,7 +3,10 @@
 		include("module/home/controller/controller_home.php");
 	} else {
 		switch ($_GET['page']) {
-			case 'controller_likes':
+			case 'contact_us':
+				include("module/contact/contactus.php");
+				break;
+			case 'likes_controller':
 				include("module/likes/controller/likes_controller.php");
 				break;
 			case 'list_prod':

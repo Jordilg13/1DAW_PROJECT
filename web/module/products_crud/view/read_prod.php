@@ -1,3 +1,18 @@
+<div class="inner-banner-w3ls">
+    <div class="container">
+        <!-- page details -->
+        <div class="breadcrumb-agile">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">Faqs</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="contenido">
     <h1>Informacion del Usuario</h1>
     <p>
