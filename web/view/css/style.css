@@ -1,0 +1,155 @@
+a:hover {
+	cursor:pointer;
+   }
+.Button_green {
+	background-color:green;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid green;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_green:hover {
+	background-color:greenyellow;
+}
+.Button_green:active {
+	position:relative;
+	top:1px;
+}
+.Button_blue {
+	background-color:blue;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid blue;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_blue:hover {
+	background-color:cyan;
+}
+.Button_blue:active {
+	position:relative;
+	top:1px;
+}
+.Button_red {
+	background-color:crimson;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid crimson;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_red:hover {
+	background-color:red;
+}
+.Button_red:active {
+	position:relative;
+	top:1px;
+}
+.Button_white {
+	background-color:#ffffff;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #000;
+	display:inline-block;
+	cursor:pointer;
+	color: #000;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_white:hover {
+	background-color:grey;
+}
+.Button_white:active {
+	position:relative;
+	top:1px;
+}
+
+#map {
+	height: 100%;
+  }
+
+  /* search bar */
+.search-bar-products{    
+	width: 75%;
+}
+  
+.dropbtn {
+	background-color: #3498DB;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+	background-color: #2980B9;
+  }
+  
+  .dropdown {
+	/* position: relative; */
+	/* display: inline-block; */
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	width: 228px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {
+	  background-color: #cccccc ;
+	}
+  
+  .show {display: block;}
+
+  /* end searchbar */
+
+
+  .like{
+	  margin-top: 5px;
+  }
+  .like:hover{
+	  border: 1px solid black;
+	}
+	.md-form{
+		margin-inline-end: 10px;
+	}
