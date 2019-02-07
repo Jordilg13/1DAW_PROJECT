@@ -6,24 +6,6 @@
     }
 
    switch ($_GET['op']) {
-        case 'autocomplete':
-            try {
-                $daoprodhome = new DAOHomeProduct();
-                $rt = $daoprodhome->select_prod_autocomp($_POST);
-            }catch (Exception $e){
-                
-                $callback = 'index.php?page=503';
-                die('<script>window.location.href="'.$callback .'";</script>');
-            }
-            if(!$rt){
-                $callback = 'index.php?page=503';
-                die('<script>window.location.href="'.$callback .'";</script>');
-            }else{
-                // print_r($rt->fetch_all());
-                echo json_encode($rt->fetch_all());
-            }
-
-            break;
         case 'list_home':
             // num of products at home
             if (isset($_GET['num'])) {

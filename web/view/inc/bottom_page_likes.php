@@ -1,3 +1,6 @@
+<!-- BOTTOM PAGE LIKES -->
+
+
 <!-- Js files -->
 	<!-- JavaScript -->
 	<!-- <script src="js/jquery-2.2.3.min.js"></script> -->
@@ -37,7 +40,7 @@
 
 	<!--banner-slider-->
 	<script src="js/JiSlider.js"></script>
-	<script>
+	<!-- <script>
 		$(window).load(function () {
 			$('#JiSlider').JiSlider({
 				color: '#fff',
@@ -45,7 +48,7 @@
 				reverse: true
 			}).addClass('ff')
 		})
-	</script>
+	</script> -->
 	<!-- //banner-slider -->
 
 	<!-- carousel(for feedback) -->
@@ -80,7 +83,7 @@
 	<!-- //carousel(for feedback) -->
 
 	<!-- flexisel(for filter) -->
-	<!-- <script src="js/jquery.flexisel.js"></script>
+	<script src="js/jquery.flexisel.js"></script>
 	<script>
 		$(window).load(function () {
 			$("#flexiselDemo1").flexisel({
@@ -107,7 +110,7 @@
 			});
 
 		});
-	</script> -->
+	</script>
 	<!-- //flexisel(for filter) -->
 
 	<!-- smooth scrolling -->
@@ -128,3 +131,5 @@
 </body>
 
 </html>
+
+

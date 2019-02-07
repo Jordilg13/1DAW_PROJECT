@@ -44,6 +44,9 @@
 					<li>
 						<a class="nav-link text-uppercase" id="likes_controller" href="index.php?page=likes_controller&op=list" data-tr="Likes">Likes</a>
 					</li>
+					<li>
+						<a class="nav-link text-uppercase" id="shop_controller" href="index.php?page=shop_controller&op=list" data-tr="Shop">Shop</a>
+					</li>
 				</ul>
 				<div class="top-info text-lg-right text-center mt-lg-0 mt-3">
 					<ul class="list-unstyled">

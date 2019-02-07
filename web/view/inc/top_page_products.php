@@ -81,3 +81,5 @@
             <!-- //page details -->
     </div>
 </div>
+
+<!-- TOP PAGE PRODUCTS -->

@@ -3,6 +3,9 @@
 		include("module/home/controller/controller_home.php");
 	} else {
 		switch ($_GET['page']) {
+			case 'shop_controller':
+				include("components/shop/controller/shop_controller.php");
+				break;
 			case 'contact_us':
 				include("module/contact/contactus.php");
 				break;

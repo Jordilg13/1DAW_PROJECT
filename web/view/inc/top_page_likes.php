@@ -59,7 +59,7 @@
     <script type="text/javascript" src="view/js/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
     <script type="text/javascript" src="view/js/jqwidgets/scripts/demos.js"></script>
 
-	<script type="text/javascript" src="module/home/model/main_products.js"></script>
+	<!-- <script type="text/javascript" src="module/home/model/main_products.js"></script> -->
 	<script type="text/javascript" src="view/js/lang.js"></script>
 	<script type="text/javascript" src="module/likes/model/likes.js"></script>
 	<script type="text/javascript" src="view/js/menu.js"></script>
@@ -85,3 +85,6 @@
             <!-- //page details -->
     </div>
 </div>
+
+
+<!-- TOP PAGE LIKES -->

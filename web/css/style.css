@@ -296,11 +296,11 @@ nav.navbar.shrink .navbar-toggler {
 
 .bs-slider-overlay {
     background-color: rgba(0, 0, 0, 0.40);
-    height: 50vw;
+    height: 400px;
 }
 
 .w3l-slide-text {
-    padding-top: 17em;
+    padding-top: 4em;
 }
 
 .w3l-slide-text h3 {

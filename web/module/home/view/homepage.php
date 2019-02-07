@@ -1,4 +1,88 @@
-	<!-- feedback -->
+
+<!-- banner slider-->
+<div class="banner-silder">
+		<div id="JiSlider" class="jislider">
+			<ul>
+				<li>
+					<div class="w3layouts-banner-top">
+						<div class="bs-slider-overlay">
+							<div class="container">
+								<!-- Slide Text Layer -->
+								<div class="w3l-slide-text">
+									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
+									<h3 data-animation="animated zoomInRight">Enjoy the benefits of outdoor construction</h3>
+									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w3layouts-banner-top w3layouts-banner-top1">
+						<div class="bs-slider-overlay">
+							<div class="container">
+								<!-- Slide Text Layer -->
+								<div class="w3l-slide-text">
+									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
+									<h3 data-animation="animated zoomInRight">Get the best in architecture and design</h3>
+									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w3layouts-banner-top w3layouts-banner-top2">
+						<div class="bs-slider-overlay">
+							<div class="container">
+								<!-- Slide Text Layer -->
+								<div class="w3l-slide-text">
+									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
+									<h3 data-animation="animated zoomInRight">Enjoy the benefits of outdoor construction</h3>
+									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w3layouts-banner-top w3layouts-banner-top3">
+						<div class="bs-slider-overlay">
+							<div class="container">
+								<!-- Slide Text Layer -->
+								<div class="w3l-slide-text">
+									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
+									<h3 data-animation="animated zoomInRight">Get the best in architecture and design</h3>
+									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w3layouts-banner-top w3layouts-banner-top4">
+						<div class="bs-slider-overlay">
+							<div class="container">
+								<!-- Slide Text Layer -->
+								<div class="w3l-slide-text">
+									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
+									<h3 data-animation="animated zoomInRight">Enjoy the benefits of outdoor construction</h3>
+									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //banner slider -->
+<!-- feedback -->
 <section class="news py-5" id="feedback">
 	<!-- search bar -->
 	<form class="form-inline ml-auto search-bar-products">
@@ -29,7 +113,7 @@
 				</div>
 			</div>
 		</div>
-		<button class="btn btn-outline-red btn-md my-0 ml-sm-2" id="submit_button_searcher">Search</button>
+		<a class="btn btn-default" id="submit_button_searcher_home">Search</a>
 	</form>
 
 	<div class="container py-xl-5 py-lg-3">

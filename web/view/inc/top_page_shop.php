@@ -48,32 +48,28 @@
 
 	<link rel="stylesheet" href="view/css/style.css">
 	<script type="text/javascript" src="view/js/menu.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	<script type="text/javascript" src="components/shop/model/main_shop.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
 	<!-- main js from home module -->
 	<script type="text/javascript" src="module/home/model/main_home.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
-	<script type="text/javascript" src="components/shop/model/main_shop.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
-
 </head>
 <body>
-	<?
-	if (isset($_GET['page'])) {
-		echo '<div class="inner-banner-w3ls">
-		<div class="container">
-			<!-- page details -->
-			<div class="breadcrumb-agile">
-				<div aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<!-- <li class="breadcrumb-item">
-							<a href="index.php">Home</a>
-						</li>
-						<li class="breadcrumb-item" aria-current="page"></li> -->
-					</ol>
-				</div>
-			</div>
-				<!-- //page details -->
-		</div>
-	</div>';
-	}
-?>
-<!-- STANDARD TOP PAGE -->
+<div class="inner-banner-w3ls">
+    <div class="container">
+        <!-- page details -->
+        <div class="breadcrumb-agile">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <!-- <li class="breadcrumb-item">
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page"><? echo $_GET['page'] ?></li> -->
+                </ol>
+            </div>
+        </div>
+            <!-- //page details -->
+    </div>
+</div>
+
+<!-- TOP PAGE SHOP -->

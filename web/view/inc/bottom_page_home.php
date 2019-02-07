@@ -1,4 +1,5 @@
-<!-- BOTTOM PAGE CRUD -->
+<!-- BOTTOM PAGE -->
+
 
 <!-- Js files -->
 	<!-- JavaScript -->
@@ -36,6 +37,50 @@
 	</script>
 	<!-- //fixed nav -->
 	<!-- //navigation -->
+
+	<!--banner-slider-->
+	<script src="js/JiSlider.js"></script>
+	<script>
+		$(window).load(function () {
+			$('#JiSlider').JiSlider({
+				color: '#fff',
+				start: 3,
+				reverse: true
+			}).addClass('ff')
+		})
+	</script>
+	<!-- //banner-slider -->
+
+	<!-- carousel(for feedback) -->
+	<script src="js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					600: {
+						items: 2,
+						nav: false
+					},
+					1000: {
+						items: 3,
+						nav: true,
+						loop: false,
+						margin: 20
+					}
+				}
+			})
+		})
+	</script>
+	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="screen" property="" />
+	<!-- //carousel(for feedback) -->
 
 	<!-- flexisel(for filter) -->
 	<script src="js/jquery.flexisel.js"></script>
