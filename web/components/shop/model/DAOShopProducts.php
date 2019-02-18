@@ -3,6 +3,16 @@ $path = $_SERVER['DOCUMENT_ROOT'] . "/web/";
 include_once($path."model/class.php");
 
 class DAOShopProduct{
+    function single_element($id){
+        $sql = "SELECT * ".
+               "FROM comentarios.products ".
+               "WHERE product_code ='".$id."'";
+        // echo($sql);
+        $conexion = Conectar::con();
+        $res = mysqli_query($conexion, $sql);
+        Conectar::close($conexion);
+        return $res;
+    }
     function select_prod_autocomp($data){
         // error_log(print_r($data));
         $sql = "SELECT DISTINCT ".$data['toAutoComplete'].

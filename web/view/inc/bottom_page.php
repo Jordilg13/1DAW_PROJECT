@@ -7,7 +7,7 @@
 	<!-- Default-JavaScript-File -->
 	<script src="js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-
+	<link rel="stylesheet" href="css/material.min.css" type="text/css" media="all">
 	<!-- navigation -->
 	<!-- dropdown smooth -->
 	<script>
@@ -50,7 +50,11 @@
 		})
 	</script> -->
 	<!-- //banner-slider -->
+	<script id="api_call" src="http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByKeywords&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=<?echo _EBAY_API_KEY_ ?>&GLOBAL-ID=EBAY-US&RESPONSE-DATA-FORMAT=JSON&callback=_cb_findItemsByKeywords&REST-PAYLOAD&keywords=computer&paginationInput.entriesPerPage=30"></script>
+	<!-- id: 112976185186 -->
 
+	<!-- single item -->
+	<!-- http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=XML&appid=jordillo-1daw2tri-PRD-0a6d8bb94-3b8a58d7&siteid=0&version=967&ItemID=112976185186 -->
 	<!-- carousel(for feedback) -->
 	<script src="js/owl.carousel.js"></script>
 	<script>
@@ -122,9 +126,8 @@
 	<!--  necessary snippets for few javascript files -->
 	<script src="js/outdoor.js"></script>
 
-	<script src="js/bootstrap.js"></script>
+	<!-- <script src="js/bootstrap.js"></script> -->
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-
 	<!-- //Js files -->
 
 

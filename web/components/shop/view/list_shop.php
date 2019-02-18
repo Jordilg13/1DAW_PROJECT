@@ -36,4 +36,47 @@
 
 		</div>
 	</div>
+	<div class="col-12">
+  <div class="panel panel-default">
+      <div class="panel-head">
+          <div class="panel-title">Related products</div>
+      </div>
+      <div class="panel-wrapper">
+          <div class="panel-body">
+              <div class="row">
+                  <div class="col-12 related-product">
+                      <div class="owl-carousel owl-theme multi-item-slider" id="api_products">
+                          <!-- <div class="theme-owlslider-container">
+                              <img class="img-responsive" src="../uploads/shop-11.jpg" alt="">
+                              <h6 class="title"><a href="#">Canon Camera</a></h6>
+                              <div class="price">$499</div>
+                          </div>
+                          <div class="theme-owlslider-container">
+                              <img class="img-responsive" src="../uploads/shop-21.jpg" alt="">
+                              <h6 class="title"><a href="#">Multiple Product</a></h6>
+                              <div class="price">$499</div>
+                          </div>
+                          <div class="theme-owlslider-container">
+                              <img class="img-responsive" src="../uploads/shop-31.jpg" alt="">
+                              <h6 class="title"><a href="#">Leather Wallet and Watch</a></h6>
+                              <div class="price">$499</div>
+                          </div>
+                          <div class="theme-owlslider-container">
+                              <img class="img-responsive" src="../uploads/shop-41.jpg" alt="">
+                              <h6 class="title"><a href="#">Leather Wallet and Watch</a></h6>
+                              <div class="price">$499</div>
+                          </div>
+                          <div class="theme-owlslider-container">
+                              <img class="img-responsive" src="../uploads/shop-51.jpg" alt="">
+                              <h6 class="title"><a href="#">Leather Wallet and Watch</a></h6>
+                              <div class="price">$499</div>
+                          </div> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 </section>
+

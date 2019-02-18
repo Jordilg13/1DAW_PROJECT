@@ -1,6 +1,6 @@
 <!-- BOTTOM PAGE -->
 
-
+<script src="http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByKeywords&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=<?echo _EBAY_API_KEY_ ?>&GLOBAL-ID=EBAY-US&RESPONSE-DATA-FORMAT=JSON&callback=_cb_findItemsByKeywords&REST-PAYLOAD&keywords=computer&paginationInput.entriesPerPage=30"></script>
 <!-- Js files -->
 	<!-- JavaScript -->
 	<!-- <script src="js/jquery-2.2.3.min.js"></script> -->

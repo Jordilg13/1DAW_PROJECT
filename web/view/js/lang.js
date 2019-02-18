@@ -2,7 +2,7 @@ function changeLang(lang){
 
     lang = lang || localStorage.getItem('app-lang') || 'en';
     localStorage.setItem('app-lang', lang);
-    console.log(lang);
+    // console.log(lang);
     $.ajax({ 
         type: 'GET', 
         url: 'view/languages/'+lang+'.json', 

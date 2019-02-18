@@ -143,12 +143,12 @@
 	
 		
 		<?php
-		$images = array(
-			'computer' => "computer.jpg",
-			'headp' => "headphones.jpg",
-			'tab' => "tablet.png",
-			'tab2' => "tablet2.jpg",
-		);
+		// $images = array(
+		// 	'computer' => "computer.jpg",
+		// 	'headp' => "headphones.jpg",
+		// 	'tab' => "tablet.png",
+		// 	'tab2' => "tablet2.jpg",
+		// );
 		//pretty home product(copypaste)
 		$template_prod = "
 	<div class='col-md-3 col-6 s-1'>
@@ -170,7 +170,7 @@
 				$i++;
 				// $row['product_name'].'&nbsp;&nbsp;' -> white spaces added to avoid css mistakes in products
 				// names with less than 3 chars
-				echo sprintf($template_prod, $row['product_name'].'&nbsp;&nbsp;', $row['price'], $images[array_rand($images)], $row['price']);
+				echo sprintf($template_prod, $row['product_name'].'&nbsp;&nbsp;', $row['price'], $row['price']);
 				// echo sprintf($template_prod, $images[array_rand($images)],$images[array_rand($images)]);
 				if ($i%4 == 0) {
 					echo("</div>");
@@ -183,5 +183,25 @@
 			</div>
 		</div>
 	</div>
+
+
+	<div class="col-12">
+  <div class="panel panel-default">
+      <div class="panel-head">
+          <div class="panel-title">Related Products</div>
+      </div>
+      <div class="panel-wrapper">
+          <div class="panel-body">
+              <div class="row">
+                  <div class="col-12 related-product">
+                      <div class="owl-carousel owl-theme multi-item-slider" id="api_products">
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 </section>
 <!-- //feedback -->
