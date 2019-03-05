@@ -6,6 +6,9 @@
 			case 'shop_controller':
 				include("components/shop/controller/shop_controller.php");
 				break;
+			case 'login':
+				include("module/login/view/view_login.php");
+				break;
 			case 'contact_us':
 				include("module/contact/contactus.php");
 				break;

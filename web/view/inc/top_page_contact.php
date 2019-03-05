@@ -55,6 +55,10 @@
 	
 	  <script type="text/javascript" src="view/js/menu.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
+	  <!-- login -->
+	<script type="text/javascript" src="module/login/model/main_login.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	<link rel="stylesheet" href="module/login/view/main_login_css.css">
+
 </head>
 <body>
 

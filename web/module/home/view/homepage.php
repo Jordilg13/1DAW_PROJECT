@@ -11,8 +11,8 @@
 								<div class="w3l-slide-text">
 									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
 									<h3 data-animation="animated zoomInRight">Enjoy the benefits of outdoor construction</h3>
-									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
-										Our Services</a>
+									<!-- <a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a> -->
 								</div>
 							</div>
 						</div>
@@ -26,8 +26,8 @@
 								<div class="w3l-slide-text">
 									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
 									<h3 data-animation="animated zoomInRight">Get the best in architecture and design</h3>
-									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
-										Our Services</a>
+									<!-- <a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a> -->
 								</div>
 							</div>
 						</div>
@@ -41,8 +41,8 @@
 								<div class="w3l-slide-text">
 									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
 									<h3 data-animation="animated zoomInRight">Enjoy the benefits of outdoor construction</h3>
-									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
-										Our Services</a>
+									<!-- <a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a> -->
 								</div>
 							</div>
 						</div>
@@ -56,8 +56,8 @@
 								<div class="w3l-slide-text">
 									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
 									<h3 data-animation="animated zoomInRight">Get the best in architecture and design</h3>
-									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
-										Our Services</a>
+									<!-- <a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a> -->
 								</div>
 							</div>
 						</div>
@@ -71,8 +71,8 @@
 								<div class="w3l-slide-text">
 									<!-- <p class="aos-init aos-animate" data-aos="fade-down">Excepteur sint occaecat cupidatat non proident</p> -->
 									<h3 data-animation="animated zoomInRight">Enjoy the benefits of outdoor construction</h3>
-									<a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
-										Our Services</a>
+									<!-- <a href="services.html" target="_blank" class="button-style" data-animation="animated fadeInDown" data-aos="fade-down">View
+										Our Services</a> -->
 								</div>
 							</div>
 						</div>
@@ -152,11 +152,11 @@
 		//pretty home product(copypaste)
 		$template_prod = "
 	<div class='col-md-3 col-6 s-1'>
-		<a href='services.html'>
+		<a>
 			<div class='view view-fifth'>
 				<i class='fas fa-home'></i>
 				<div class='mask'>
-					<h4>%s    %s€</h4>
+				<h4 id='individual_card' name='%s'>%s    %s€<p id='%s' class='like'>❤</p></h4>
 				</div>
 			</div>
 		</a>
@@ -170,7 +170,8 @@
 				$i++;
 				// $row['product_name'].'&nbsp;&nbsp;' -> white spaces added to avoid css mistakes in products
 				// names with less than 3 chars
-				echo sprintf($template_prod, $row['product_name'].'&nbsp;&nbsp;', $row['price'], $row['price']);
+				// print_r($row);
+				echo sprintf($template_prod, $row['product_code'], $row['product_name'].'&nbsp;&nbsp;', $row['price'],$row['product_code']);
 				// echo sprintf($template_prod, $images[array_rand($images)],$images[array_rand($images)]);
 				if ($i%4 == 0) {
 					echo("</div>");

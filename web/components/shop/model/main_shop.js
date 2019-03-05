@@ -6,7 +6,7 @@ function fillElements(id_arr) {
         url: "components/shop/controller/shop_controller.php?op=autocomplete",
         type: 'POST',
         success: function (data) {
-            console.log(data);
+            console.log("data");
             data = JSON.parse(data);
             $template_prod =
                 "<div class='col-md-3 col-6 s-1 product-card' id='product_card_id'>" +
@@ -14,7 +14,7 @@ function fillElements(id_arr) {
                 "<div class='view view-fifth'>" +
                 "<i class='fas fa-home'></i>" +
                 "<div class='mask'>" +
-                "<h4 id='individual_card' name='%s'>%s    %s€</h4>" +
+                "<h4 id='individual_card' name='%s'>%s    %s€ <p id='%s' class='like'>❤</p></h4>" +
                 "</div>" +
                 "</div>" +
                 "</a>" +
@@ -25,7 +25,7 @@ function fillElements(id_arr) {
 
             //append new elements
             for (let i = 0; i < data.length; i++) {
-                $("#searched_products").append(sprintf($template_prod, [data[i][0],data[i][1], data[i][4]]));
+                $("#searched_products").append(sprintf($template_prod, [data[i][0],data[i][1], data[i][4],data[i][0]]));
             }
             let prod_cards = document.querySelectorAll('#product_card_id');
 
@@ -134,6 +134,8 @@ function fillSingleProduct(id) {
                 document.getElementById("state").innerHTML = "<b>State: </b>"+data[0][5];
                 document.getElementById("processor_type").innerHTML = "<b>Processor Type: </b>"+data[0][7];
                 document.getElementById("available_until").innerHTML = "<b>Available Until: </b>"+data[0][8];
+                document.getElementsByClassName('btn btn-default btn-lg like')[0].id = data[0][0]
+                console.log(document.getElementsByClassName('btn btn-default btn-lg like')[0].id);
             }
         })
     } else {
@@ -149,6 +151,7 @@ function fillSingleProduct(id) {
                 document.getElementById("price").innerHTML = data['price'];
                 document.getElementById("description").innerHTML = data['description'];
                 document.getElementById("product_picture").src = data['img'];
+                // break lines
                 document.getElementById("fooBar").appendChild(document.createElement("br"));
                 document.getElementById("fooBar").appendChild(document.createElement("br"));
                 document.getElementById("fooBar").appendChild(document.createElement("br"));
@@ -172,6 +175,12 @@ $(document).ready(function () {
     var op = url.searchParams.get("op");
     // var page = url.searchParams.get("page");
 
+    
+
+    $('.mask').on("click",function(){
+        console.log('españa');
+        
+    });
     if (op == "list") {
         //first time fill with no-filters elements
         id_arr = generateDataToSend("*");
@@ -251,3 +260,6 @@ window.onclick = function (event) {
         }
     }
 }
+
+
+// TODO: Fer que els productes del home, al clickar porten al details.

@@ -1,18 +1,17 @@
-function validacode(code){
+function validacode(code) {
     if (code.length > 0) {
         var regexp = /^([A-Z]{1})([0-9]{4})$/;
         return regexp.test(code);
     }
     return false;
 }
-function validastring(str){
+function validastring(str) {
     if (str.length > 0) {
         var regexp = /^[a-zA-Z0-9]*$/;
         return regexp.test(str);
     }
     return false;
 }
-
 function validaemail(email) {
     if (email.length > 0) {
         var regexp = /^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+.)+[A-Z]{2,4}$/i;
@@ -20,8 +19,7 @@ function validaemail(email) {
     }
     return false;
 }
-
-function validate_prod(option){
+function validate_prod(option) {
     var result = true;
 
     var code = document.getElementById('product_code').value;
@@ -63,102 +61,130 @@ function validate_prod(option){
     if (document.getElementById('state').value == "Other") {
         document.getElementById('e_state').innerHTML = "Invalid state.";
         result = false;
-    } else 
+    } else
         document.getElementById('e_state').innerHTML = "";
-    
+
     //processor type
     var ischecked = false;
     var checkboxes = document.getElementsByName('type_proc[]');
     for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked)
-            ischecked = true;       
+            ischecked = true;
     }
     if (!ischecked) {
         document.getElementById('e_type_proc').innerHTML = "Check at least one type of processor.";
         result = false;
-    } else 
+    } else
         document.getElementById('e_type_proc').innerHTML = "";
-    
+
     //available until
     console.log(document.getElementById('demo1').value);
     if (document.getElementById('demo1').value == "") {
         document.getElementById('e_available_until').innerHTML = "Select a day.";
         result = false;
     }
-    else 
+    else
         document.getElementById('e_available_until').innerHTML = "";
 
 
-    console.log("fin validacio js: "+result);
+    console.log("fin validacio js: " + result);
 
     if (result) {
         document.formm.submit();
-        document.formm.action="index.php?page=controller_products&op="+option;
+        document.formm.action = "index.php?page=controller_products&op=" + option;
     }
+}
+
+function chargeLikesOfUser() {
+    $(".like").each(function () {
+        var $this = $(this);
+        if (getUserId().responseText != "no logged") {
+            var id_arr = { "id": this.id };
+            $.ajax({
+                type: 'POST',
+                url: 'module/likes/controller/likes_controller.php?op=check_like',
+                data: id_arr,
+                success: function (data) {
+                    // console.log(data);
+                    if (data == "true") {
+                        $this.removeClass('btn-default').addClass('btn-danger');
+                    } else {
+                        $this.removeClass('btn-danger').addClass('btn-default');
+                    }
+                }
+            });
+        } else {
+            $this.removeClass('btn-danger').addClass('btn-default');
+        }
+    });
+    
+    
 }
 
 $(document).ready(function () {
     $("#details").hide(); //hidden fails
-    $('#table_crud').DataTable();
+
+    if ($('#table_crud').length) {
+        $('#table_crud').DataTable();
+    }
 
     // change color buttons depending DB
-    $(".like").each(function(){
-        var $this = $(this);
-        var id_arr = {"id": this.id};
-        $.ajax({ 
-            type: 'POST', 
-            url: 'module/likes/controller/likes_controller.php?op=check_like', 
-            data: id_arr,
-            success: function (data) {
-                // console.log(data);
-                if (data == "true") {     
-                    $this.removeClass('btn-default').addClass('btn-danger');
-                } else {
-                    $this.removeClass('btn-danger').addClass('btn-default');
-                }
-            }
-        });
-    })
+    
+    chargeLikesOfUser()
+
 
     // toggle like of the clicked product and change button's class depending the state
     $(".like").on("click", function () {
-        var id_arr = {"id": this.id};
-        var $this = $(this);
-        $.ajax({ 
-            type: 'POST', 
-            url: 'module/likes/controller/likes_controller.php?op=toggle_like', 
-            data: id_arr,
-            success: function (data) {
-                // console.log(data);
-                if (data == "false") {     
-                    $this.removeClass('btn-default').addClass('btn-danger');
-                } else {
-                    $this.removeClass('btn-danger').addClass('btn-default');
+
+        if (getUserId().responseText != "no logged") {
+            var $this = $(this);
+            var id_arr = {
+                "id": $(this)[0].id,
+                "user": getUserId().responseText
+            };
+            
+            // console.log(id_arr);
+            $.ajax({
+                type: 'POST',
+                url: 'module/likes/controller/likes_controller.php?op=toggle_like',
+                data: id_arr,
+                success: function (data) {
+                    // console.log($this[0]);
+                    if (data == "false") {
+                        $this.removeClass('btn-default').addClass('btn-danger');
+                    } else {
+                        console.log("removed red");
+                        $this.removeClass('btn-danger').addClass('btn-default');
+                    }
                 }
-            }
-        });
-});
+            });
+        }
+        else {
+            window.location.href = "index.php?page=login"
+        }   
+
+    });
     $('.prod').on("click", function () {
         var id = this.getAttribute('id');
         //alert(id);
 
         //request to obtain the product info
         //if succes: print modal
-        $.ajax({ 
-            type: 'GET', 
-            url: 'module/products_crud/controller/controller_products.php?op=read_modal&modal=' + id, 
+        $.ajax({
+            type: 'GET',
+            url: 'module/products_crud/controller/controller_products.php?op=read_modal&modal=' + id,
             dataType: 'json',
             success: function (data) {
                 console.log("success");
                 // console.log(data);
-                
-                if(data === 'error') {
+
+                if (data === 'error') {
                     //console.log(data);
                     //pintar 503
-                    window.location.href='index.php?page=503';
-                }else{
+                    window.location.href = 'index.php?page=503';
+                } else {
                     console.log(data);
-                    
+
                     $("#p_code").html(data.product_code);
                     $("#p_name").html(data.product_name);
                     $("#p_brand").html(data.brand);
@@ -167,7 +193,7 @@ $(document).ready(function () {
                     $("#p_state").html(data.state_product);
                     $("#p_processor").html(data.processor_type);
                     $("#p_availableuntil").html(data.available_until);
-         
+
                     $("#details").show();
                     $("#prod_modal").dialog({
                         width: 850, //<!-- ------------- ancho de la ventana -->
@@ -193,7 +219,7 @@ $(document).ready(function () {
                     });
                 }//end-else
             },
-            error: function(data){
+            error: function (data) {
                 console.log("error");
                 console.log(data);
             }
@@ -201,9 +227,9 @@ $(document).ready(function () {
     });
 
     $('#demo1').datepicker({
-        dateFormat: 'dd/mm/yy', 
-        changeMonth: true, 
-        changeYear: true, 
+        dateFormat: 'dd/mm/yy',
+        changeMonth: true,
+        changeYear: true,
         yearRange: '1900:2100',
         minDate: -1000000,
     });

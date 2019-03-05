@@ -580,3 +580,15 @@ a:hover {
 		opacity: 1;
 	}
 }
+
+
+
+/* like button product home and shop */
+.mask p {
+	font-size: 15px;
+	color: white;
+}
+.mask p:hover {
+	border: 1px solid white;
+
+}

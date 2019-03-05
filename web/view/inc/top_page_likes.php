@@ -39,6 +39,7 @@
     <!-- //Web-Fonts -->
     
 <!-- //template -->
+
     
     <link rel="stylesheet" href="/resources/demos/style.css">
 
@@ -46,6 +47,11 @@
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+	<!-- login -->
+	<script type="text/javascript" src="module/login/model/main_login.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	<link rel="stylesheet" href="module/login/view/main_login_css.css">
+
 	  <!-- jqwidgets -->
 	<link rel="stylesheet" href="view/js/jqwidgets/jqwidgets/styles/jqx.metro.css" type="text/css" />
 	<link rel="stylesheet" href="view/js/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
@@ -64,7 +70,7 @@
 	<script type="text/javascript" src="module/likes/model/likes.js"></script>
 	<script type="text/javascript" src="view/js/menu.js"></script>
 	
-	
+
 
 </head>
 <body>

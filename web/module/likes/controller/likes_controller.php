@@ -1,16 +1,20 @@
 <?
 $path = $_SERVER['DOCUMENT_ROOT'] . "/web/";
 include($path . "module/likes/model/likesDAO.php");
+include_once($path . "view\php_functions\user_validation.php");
     
 switch ($_GET['op']) {
     case 'list':
-        include("module/likes/view/list_likes.php");
+        $uhas = Functions::loggedUserHasPermissions();
+        if ($uhas) 
+            include("module/likes/view/list_likes.php");
+         else 
+            echo("<script>window.location.href = 'index.php'</script>");        
         break;
     case 'toggle_like':
-        
         try{
             $daolike = new likesDAO();
-            $rlt = $daolike->toggle_like($_POST['id']);
+            $rlt = $daolike->toggle_like($_POST);
         } catch(Exception $e){
             echo json_encode("error");
         }
@@ -41,7 +45,7 @@ switch ($_GET['op']) {
     case 'datatable':    
         try{
             $daolike = new likesDAO();
-            $rlt = $daolike->select_all_likes();
+            $rlt = $daolike->select_all_likes($_GET);
         } catch(Exception $e){
             echo json_encode("error");
         }

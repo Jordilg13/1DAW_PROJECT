@@ -52,7 +52,11 @@
 
 	<!-- main js from home module -->
 	<script type="text/javascript" src="module/home/model/main_home.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	<!-- login -->
+	<script type="text/javascript" src="module/login/model/main_login.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	<link rel="stylesheet" href="module/login/view/main_login_css.css">
 
+	<script type="text/javascript" src="module/products_crud/model/main_products.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
 	
 

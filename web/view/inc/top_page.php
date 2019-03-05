@@ -52,7 +52,20 @@
 	<!-- main js from home module -->
 	<script type="text/javascript" src="module/home/model/main_home.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
+	<!-- login -->
+	<script type="text/javascript" src="module/login/model/main_login.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	<link rel="stylesheet" href="module/login/view/main_login_css.css">
+
+	<!-- <script type="text/javascript" src="view/js/jquery.fixer.js.js?jsVersion=<? echo _JS_VERSION_ ?>"></script> -->
+	
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+
 	<script type="text/javascript" src="components/shop/model/main_shop.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+
+	<script type="text/javascript" src="module/products_crud/model/main_products.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	
+	<script type="text/javascript" src="module/likes/model/likes.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+
 
 </head>
 <body>
@@ -73,7 +86,7 @@
   </div>
 </div>
 	<?
-	if (isset($_GET['page'])) {
+	if (isset($_GET['page']) && $_GET['page'] != 'login') {
 		echo '<div class="inner-banner-w3ls">
 		<div class="container">
 			<!-- page details -->

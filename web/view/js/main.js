@@ -126,7 +126,6 @@ function _cb_findItemsByKeywords(root) {
     }
     // html.push('</tbody></table>');
     
-    
     document.getElementById("api_products").innerHTML = html.join("");
     var elements_div_api = document.getElementsByClassName('theme-owlslider-container');
     for (let i = 0; i < elements_div_api.length; i++) {
@@ -145,7 +144,7 @@ function _cb_findItemsByKeywords(root) {
         
         $.ajax({
           data: id_data_prod,
-          url: 'components\\shop\\controller\\shop_controller.php?op=redirect',
+          url: 'components/shop/controller/shop_controller.php?op=redirect',
           type: 'POST',
           success: function(d){
             window.location.href = "index.php?page=shop_controller&op=view_product&id="+id_data_prod['id'];

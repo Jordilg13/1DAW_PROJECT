@@ -81,6 +81,8 @@
     <div class="product-price">
       <span id="price"></span>
       <a href="#" class="cart-btn">Add to cart</a>
+      &nbsp&nbsp&nbsp&nbsp&nbsp
+      <a class="btn btn-default btn-lg like" id="">❤</a>
     </div>
   </div>
 </div>

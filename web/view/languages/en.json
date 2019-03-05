@@ -11,7 +11,9 @@
         "ContactUs": "Contact Us",
         "Likes": "Likes",
         "Contact Us": "Contact Us",
-        "Shop": "Shop"
+        "Shop": "Shop",
+        "Login": "Login",
+        "Logout": "Logout"
     }
 
 }
