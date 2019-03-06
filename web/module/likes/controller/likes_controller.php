@@ -18,6 +18,7 @@ switch ($_GET['op']) {
         } catch(Exception $e){
             echo json_encode("error");
         }
+        // print_r($rlt);
 
         if(!$rlt['rlt']){
             echo json_encode("error2");
@@ -30,7 +31,7 @@ switch ($_GET['op']) {
         
         try{
             $daolike = new likesDAO();
-            $rlt = $daolike->check_like($_POST['id']);
+            $rlt = $daolike->check_like($_POST);
         } catch(Exception $e){
             echo json_encode("error");
         }

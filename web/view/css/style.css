@@ -592,3 +592,13 @@ a:hover {
 	border: 1px solid white;
 
 }
+
+#cart_btn{
+	background-image: url("../img/cart.png");
+	background-repeat: no-repeat;
+	min-width: 30px; 
+}
+
+/* #cart_btn:hover{
+	filter: sepia(96%) saturate(5851%) hue-rotate(357deg) brightness(102%) contrast(112%) invert(12%);
+} */

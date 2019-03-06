@@ -96,17 +96,24 @@ function validate_prod(option) {
 }
 
 function chargeLikesOfUser() {
+    var logged_user = getUserId().responseText;
     $(".like").each(function () {
         var $this = $(this);
-        if (getUserId().responseText != "no logged") {
-            var id_arr = { "id": this.id };
+        if (logged_user != "no logged") {
+            var id_arr = { 
+                "id": this.id,
+                "user": logged_user 
+            };
+            // console.log(id_arr);
+            
             $.ajax({
                 type: 'POST',
                 url: 'module/likes/controller/likes_controller.php?op=check_like',
                 data: id_arr,
                 success: function (data) {
+                    // console.log(id_arr['id']);
                     // console.log(data);
-                    if (data == "true") {
+                    if (data == '"true"') {
                         $this.removeClass('btn-default').addClass('btn-danger');
                     } else {
                         $this.removeClass('btn-danger').addClass('btn-default');
@@ -143,17 +150,17 @@ $(document).ready(function () {
                 "user": getUserId().responseText
             };
             
-            // console.log(id_arr);
+            console.log(id_arr);
             $.ajax({
                 type: 'POST',
                 url: 'module/likes/controller/likes_controller.php?op=toggle_like',
                 data: id_arr,
                 success: function (data) {
-                    // console.log($this[0]);
-                    if (data == "false") {
+                    // console.log(data);
+                    if (data == '"false"') {
                         $this.removeClass('btn-default').addClass('btn-danger');
                     } else {
-                        console.log("removed red");
+                        // console.log("removed red");
                         $this.removeClass('btn-danger').addClass('btn-default');
                     }
                 }

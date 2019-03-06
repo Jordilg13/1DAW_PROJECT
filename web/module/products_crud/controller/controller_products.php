@@ -1,7 +1,6 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'] . "/web/";
 include($path . "module/products_crud/model/DAOProd.php");
-include($path."view/php_functions/dummies.php");
 
 switch ($_GET['op']) {
     case 'list':

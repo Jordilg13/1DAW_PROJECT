@@ -78,14 +78,29 @@ function validateInfo() {
   }
   return all_right;
 }
+function logout() {
+  $.ajax({
+    type: 'GET',
+    url: 'module/login/controller/login_controller.php?op=logout',
+    success: function (data) {
+      // console.log('asdf');
+
+      console.log(data);
+      if (data == '"done"') {
+        window.location.href = "index.php";
+      }
+    }
+  });
+}
 function setLoggedUser() {
   $.ajax({
     type: 'GET',
     url: 'module/login/controller/login_controller.php?op=logged_user',
     success: function (data) {
-
+      console.log(data);
       if (data != "no logged") {
-        // logout btn
+
+
         var log_btn = document.createElement("a");
         log_btn.setAttribute("id", "logout");
         log_btn.setAttribute("class", "nav-link text-uppercase");
@@ -93,21 +108,17 @@ function setLoggedUser() {
         log_btn.append(document.createTextNode("Logout"));
         log_btn.addEventListener("click", function () {
 
-          $.ajax({
-            type: 'GET',
-            url: 'module/login/controller/login_controller.php?op=logout',
-            success: function (data) {
-              // console.log('asdf');
-
-              console.log(data);
-              if (data == '"done"') {
-                window.location.href = "index.php";
-              }
-            }
-          });
+          logout();
         });
 
         document.getElementsByClassName("logged")[0].appendChild(log_btn);
+
+        var cart_btn = document.createElement("a");
+        cart_btn.setAttribute("id", "cart_btn");
+        cart_btn.setAttribute("class", "nav-link text-uppercase");
+
+        document.getElementsByClassName("logged")[0].appendChild(cart_btn);
+
 
 
         // creting the username label
@@ -134,10 +145,6 @@ function setLoggedUser() {
           
           return info;
         });
-
-        
-
-        
 
       } else {
         set_login_button();
@@ -251,11 +258,99 @@ function adaptToUser(userId) {
 
 }
 
+function regenerate_session_id() {
+  // session will be regenerated each 900s(15min)
+  window.setTimeout(function(){
+    $.ajax({
+      type: 'GET',
+      url: 'module/login/controller/login_controller.php?&op=regenerate_id',
+      dataType: 'json',
+      success: function(data){
+        console.log(data);
+        regenerate_session_id();
+      }
+    })
+  }, 900000);
+}
+
 
 $(document).ready(function () {
 
   setLoggedUser();
   adaptToUser(getUserId());
+
+
+  regenerate_session_id();
+
+  // inactivity
+  var timeoutID;
+ 
+function setup() {
+    this.addEventListener("mousemove", resetTimer, false);
+    this.addEventListener("mousedown", resetTimer, false);
+    this.addEventListener("keypress", resetTimer, false);
+    this.addEventListener("DOMMouseScroll", resetTimer, false);
+    this.addEventListener("mousewheel", resetTimer, false);
+    this.addEventListener("touchmove", resetTimer, false);
+    this.addEventListener("MSPointerMove", resetTimer, false);
+ 
+    startTimer();
+}
+setup();
+ 
+function startTimer() {
+  if (getUserId().responseText != "no logged") {
+    // it waits 10s to start sending petitions to the backend to avoid traffic
+    timeoutID = window.setTimeout(goInactive, 10000);
+  }
+}
+ 
+function resetTimer(e) {
+    window.clearTimeout(timeoutID);
+    goActive();
+}
+ 
+function goInactive() {
+  setInterval(function(){ 
+			$.ajax({
+				type: 'GET',
+				url: 'module/login/controller/login_controller.php?&op=set_time_activity',	
+				dataType: 'json',
+				success: function(data){
+					console.log(data);
+				}
+			});
+
+			$.ajax({
+				type : 'GET',
+				url  : 'module/login/controller/login_controller.php?&op=activity',
+				success :  function(response){
+          console.log(response);			
+					if(response=="inactivo"){
+						alert("We logged you out for inactivity, please log in again to still using Client features.");
+						setTimeout(logout(),1000);
+          }
+				}
+			});
+		}, 10000);  
+}
+
+function goActive() {
+  
+  
+  $.ajax({
+    type: 'GET',
+    url: 'module/login/controller/login_controller.php?&op=reset_activity_time',
+    dataType: 'json',
+    success: function(data){
+    }
+  });
+  startTimer();
+}
+
+// end inactivity
+
+
 
   $('.mask p').on("click",function(e){
     // dont active the click event on '.mask', just in '.mask p'
@@ -309,5 +404,9 @@ $(document).ready(function () {
   // $('#table_crud').on("change", funcion() {
 
   // })
+
+  
+  
+
 
 });

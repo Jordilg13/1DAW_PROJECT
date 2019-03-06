@@ -2,9 +2,6 @@
 $path = $_SERVER['DOCUMENT_ROOT'] . "/web/";
 include($path . "module/login/model/DAO_login.php");
     
-// http://php.net/manual/es/function.password-hash.php
-// http://php.net/manual/es/function.password-verify.php
-
 
 switch ($_GET['op']) {
     case 'user_info':
@@ -18,6 +15,7 @@ switch ($_GET['op']) {
         break;
     case 'logout':
         unset($_SESSION['logged_user']);
+        unset($_SESSION['time']);
         // session_destroy();
         echo json_encode("done");
         break;
@@ -76,12 +74,29 @@ switch ($_GET['op']) {
             }
             echo json_encode("created");
         }
-        break; 
+        break;
+    case 'regenerate_id':
+        session_regenerate_id();
+        echo json_encode("id regenerated");
+        break;
+    case 'reset_activity_time':
+        $_SESSION['time'] = 0;
+        echo json_encode("time reseted");
+        break;
+    case 'set_time_activity':
+        if (isset($_SESSION['time'])) {
+            $_SESSION['time'] += 10;
+            echo json_encode("incremented, actualtime: ".$_SESSION['time']);
+        } else {
+            $_SESSION['time'] = 0;
+            echo json_encode("time started");
+        }
+        break;
     case 'activity':
-        if (!isset($_SESSION["tiempo"])) {  
+        if (!isset($_SESSION["time"])) {  
             echo "activo";
-        } else {  
-            if((time() - $_SESSION["tiempo"]) >= 900) {  
+        } else { 
+            if(($_SESSION["time"]) >= 900) {  
                     echo "inactivo"; 
                     exit();
             }else{
