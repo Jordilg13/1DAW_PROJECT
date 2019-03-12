@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="web/view/img/logo4.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Jordilg13/PHP_OO_MVC">
+    <img src="web/view/img/logo4.png" alt="Logo">
   </a>
 
   <h3 align="center">Jordi Llopis García</h3>
