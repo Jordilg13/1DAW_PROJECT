@@ -1,31 +1,55 @@
-# Class Project
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="web/view/img/logo4.png" alt="Logo" width="80" height="80">
+  </a>
 
-##### Web Technologies Used
-* [PHP] - xxxxxxxxxxxxxx
-* [MVC] - xxxxxxxxxxxxxx
-* [OOP] - xxxxxxxxxxxxxx
-* [JQuery] - xxxxxxxxxxxxxx
+  <h3 align="center">Jordi Llopis García</h3>
+
+  <p align="center">
+    My first web project!
+  </p>
+</p>
+
+## About the project
+This is a web site made as a first website of 1DAW course. The page is a online shop of computers and other tech products, it accomplishes the main functions of a e-commerce with admin and client functions.
+
+## Built With
+
+* [PHP] - Backend
+* [JQuery] - Frontend
+* [JS] - Frontend
+* [Bootstrap] - CSS 
+
 
 [PHP]: <http://php.net/>
 [MVC]: <https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller>
 [OOP]: <https://en.wikipedia.org/wiki/Object-oriented_programming>
  [jQuery]: <http://jquery.com>
-##### Features
-| Feature | Description |
+ [js]: <https://es.wikipedia.org/wiki/JavaScript>
+ [Bootstrap]: <https://getbootstrap.com/>
+ 
+### Features
+
+| Page | Features |
 |---------|-------------|
-| CRUD | xxxxxxxxxxxxxxxxxxxxxxxxxxxx|
-|validaJS | radiobutton, checkbox|
-| home module | xxxxxxxxxxxx|
-| 404, 503 | xxxxxx |
-| Delete All | xxxxxxxxxxxxx |
-| Languages | xxxxxxxxxxx |
-| Modal | zzzzzzzzzzzzz |
-| Datatables | fsfgfsdad |
-| JQWidgets | xcsdvsdv |
-| Likes Module | sacasefdvvdfs |
-| Template | sdvcasdf |
+| Home | Carrousel, Filters Search, Likes, API catalog, Add to cart |
+| Shop | List, Details, API catalog, Likes, Add to cart |
+| Products list | Datatable, Modal, Delete All, CRUD, Admin View, Client View, JS/PHP validation,  Likes, Add to cart |
+| Products view | Product information, Add to cart, Likes, API Catalog  |
+| Likes | JQWidgets, User Likes, Middleware to no logged users |
+| Contact | GMaps, InfoWindow, Marker, Hidden Api Key |
+| Login | Register, Login, Logout, JS/PHP validation, Encrypted Password, Custom Avatar, Enter button supported in login, Menu, Activity Handler, Id Cookie Regenerate, Middleware to no logged users |
+| Cart | In Database, JS/PHP validation, Checkout, Increase & Decrease, Quantity controlled, Redirect to details, API products can be added |
+## Working in all website
+* Translate
+* Logged user, logout, cart
+* Preloader
 
+## Todos
+- [x] Finish class goals
+- [ ] Improve performance
+- [ ] Improve the CSS
 
-1DAW PROJECT
-Jordi Llopis Garcia
-2018-2019
+## License
+
+Distributed under the GPL 3.0 License. See `LICENSE` for more information.
