@@ -66,6 +66,8 @@
 	
 	<script type="text/javascript" src="module/likes/model/likes.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
+	<script type="text/javascript" src="module/cart/model/cart.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+
 
 
 </head>

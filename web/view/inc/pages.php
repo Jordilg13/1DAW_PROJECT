@@ -12,6 +12,9 @@
 			case 'contact_us':
 				include("module/contact/contactus.php");
 				break;
+			case 'cart_controller':
+				include("module/cart/controller/cart_controller.php");
+				break;
 			case 'likes_controller':
 				include("module/likes/controller/likes_controller.php");
 				break;

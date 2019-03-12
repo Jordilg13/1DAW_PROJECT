@@ -105,6 +105,9 @@ var product_template_api =
 '<h6 class="title"><a href="#" id="%s" cat="%s">%s</a></h6>'+
 '<div class="price">%s€</div>'+
 '</div>';
+var url_string = window.location.href;
+var url = new URL(url_string);
+var c = url.searchParams.get("page");
 
 // Parse the response and build an HTML table to display search results
 function _cb_findItemsByKeywords(root) {
@@ -125,8 +128,11 @@ function _cb_findItemsByKeywords(root) {
       }
     }
     // html.push('</tbody></table>');
+    if (c!="cart_controller") {
+      document.getElementById("api_products").innerHTML = html.join("");
+    }
     
-    document.getElementById("api_products").innerHTML = html.join("");
+
     var elements_div_api = document.getElementsByClassName('theme-owlslider-container');
     for (let i = 0; i < elements_div_api.length; i++) {
       elements_div_api[i].addEventListener("click", function () {
@@ -154,7 +160,7 @@ function _cb_findItemsByKeywords(root) {
       
       
     }
-    console.log(document.getElementsByClassName('theme-owlslider-container')[1]);
+    // console.log(document.getElementsByClassName('theme-owlslider-container')[1]);
 }  // End _cb_findItemsByKeywords() function
 
 // preloader

@@ -10,7 +10,10 @@ if ((isset($_GET['page'])) && ($_GET['page']==="controller_products")) {
     include("view/inc/top_page_contact.php");
 }else if ((isset($_GET['page'])) && ($_GET['page']==="shop_controller")){
     include("view/inc/top_page_shop.php");
-} else {
+}
+// else if ((isset($_GET['page'])) && ($_GET['page']==="cart_controller")){
+//     include("view/inc/top_page_cart.php");
+ else {
     include("view/inc/top_page.php");
 }
 ?>

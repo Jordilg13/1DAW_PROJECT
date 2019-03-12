@@ -58,6 +58,8 @@
 
 	<script type="text/javascript" src="module/products_crud/model/main_products.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
+	<script type="text/javascript" src="module/cart/model/cart.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+
 	
 
 </head>

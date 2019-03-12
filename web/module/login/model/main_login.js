@@ -97,7 +97,7 @@ function setLoggedUser() {
     type: 'GET',
     url: 'module/login/controller/login_controller.php?op=logged_user',
     success: function (data) {
-      console.log(data);
+      // console.log(data);
       if (data != "no logged") {
 
 
@@ -116,6 +116,13 @@ function setLoggedUser() {
         var cart_btn = document.createElement("a");
         cart_btn.setAttribute("id", "cart_btn");
         cart_btn.setAttribute("class", "nav-link text-uppercase");
+        cart_btn.addEventListener("click", function () {
+          window.location.href = "index.php?page=cart_controller&op=view";
+        });
+        var lbl_num_cart = document.createElement("label");
+        lbl_num_cart.setAttribute("class", "lbl_num_cart");
+        lbl_num_cart.textContent = "0";
+        cart_btn.append(lbl_num_cart);
 
         document.getElementsByClassName("logged")[0].appendChild(cart_btn);
 
@@ -274,30 +281,8 @@ function regenerate_session_id() {
 }
 
 
-$(document).ready(function () {
-
-  setLoggedUser();
-  adaptToUser(getUserId());
-
-
-  regenerate_session_id();
-
-  // inactivity
-  var timeoutID;
- 
-function setup() {
-    this.addEventListener("mousemove", resetTimer, false);
-    this.addEventListener("mousedown", resetTimer, false);
-    this.addEventListener("keypress", resetTimer, false);
-    this.addEventListener("DOMMouseScroll", resetTimer, false);
-    this.addEventListener("mousewheel", resetTimer, false);
-    this.addEventListener("touchmove", resetTimer, false);
-    this.addEventListener("MSPointerMove", resetTimer, false);
- 
-    startTimer();
-}
-setup();
- 
+// activity
+var timeoutID;
 function startTimer() {
   if (getUserId().responseText != "no logged") {
     // it waits 10s to start sending petitions to the backend to avoid traffic
@@ -348,14 +333,36 @@ function goActive() {
   startTimer();
 }
 
-// end inactivity
+function setup() {
+  this.addEventListener("mousemove", resetTimer, false);
+  this.addEventListener("mousedown", resetTimer, false);
+  this.addEventListener("keypress", resetTimer, false);
+  this.addEventListener("DOMMouseScroll", resetTimer, false);
+  this.addEventListener("mousewheel", resetTimer, false);
+  this.addEventListener("touchmove", resetTimer, false);
+  this.addEventListener("MSPointerMove", resetTimer, false);
+
+  startTimer();
+}
 
 
+
+
+$(document).ready(function () {
+
+  setLoggedUser();
+  adaptToUser(getUserId());
+
+  regenerate_session_id();
+
+  // activity
+  // setup();
+ 
 
   $('.mask p').on("click",function(e){
     // dont active the click event on '.mask', just in '.mask p'
     e.stopPropagation();
-
+    console.log("stop propagation");
     
     
   });

@@ -115,7 +115,6 @@ function autocomplete(thiss) {
 }
 
 function fillSingleProduct(id) {
-    console.log(id.length);
     if (id.length == 5) {
      
         $.ajax({
@@ -176,11 +175,12 @@ $(document).ready(function () {
     // var page = url.searchParams.get("page");
 
     
-
-    $('.mask').on("click",function(){
-        console.log('españa');
-        
+    // redirect to details on home products
+    $('.mask').on("click",function(e){
+        window.location.href = "index.php?page=shop_controller&op=view_product&id="+this.children[0].attributes[1].nodeValue;
+        e.stopPropagation();
     });
+
     if (op == "list") {
         //first time fill with no-filters elements
         id_arr = generateDataToSend("*");
