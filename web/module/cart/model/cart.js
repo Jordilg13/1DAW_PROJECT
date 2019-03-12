@@ -317,19 +317,25 @@ $(document).ready(function () {
 
     // in cart page
     if (cart_page == "cart_controller") {
-        fillCart().then(function(){
-            var total_pr = 0;
-            document.querySelectorAll('.total_price_c').forEach(element => {
-                element.innerHTML = element.parentNode.parentNode.children[1].children[0].innerHTML*element.parentNode.parentNode.children[2].children[0].children[1].value;
-                total_pr += element.parentNode.parentNode.children[1].children[0].innerHTML*element.parentNode.parentNode.children[2].children[0].children[1].value;
+        if (getUserId().responseText != "no logged") {
+            fillCart().then(function(){
+                var total_pr = 0;
+                document.querySelectorAll('.total_price_c').forEach(element => {
+                    element.innerHTML = element.parentNode.parentNode.children[1].children[0].innerHTML*element.parentNode.parentNode.children[2].children[0].children[1].value;
+                    total_pr += element.parentNode.parentNode.children[1].children[0].innerHTML*element.parentNode.parentNode.children[2].children[0].children[1].value;
+                });
+                document.getElementById('total_price_cart').innerHTML = total_pr;
             });
-            document.getElementById('total_price_cart').innerHTML = total_pr;
-        });
-        $('.checkout_btn').on("click",function(){
-            checkout();
-        });
+            $('.checkout_btn').on("click",function(){
+                checkout();
+            });
+    
+            fillLastPurchase();
+        } else {
+            window.location.href = "index.php?page=login";
+        }
 
-        fillLastPurchase();
+        
 
         
     }

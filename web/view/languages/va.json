@@ -12,6 +12,7 @@
         "Likes": "M'agrada",
         "Contact Us": "Contacta'ns",
         "Shop": "Tenda",
-        "Login": "Iniciar sessió"
+        "Login": "Iniciar sessió",
+        "Logout": "Tancar sessio"
     }
 }

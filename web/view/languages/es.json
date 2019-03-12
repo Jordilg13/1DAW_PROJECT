@@ -12,7 +12,8 @@
         "Likes": "Me Gusta",
         "Contact Us": "Contactanos",
         "Shop": "Tienda",
-        "Login": "Iniciar sessión"
+        "Login": "Iniciar sesión",
+        "Logout": "Cerrar sesion"
     }
 
 }

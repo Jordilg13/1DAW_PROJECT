@@ -1345,7 +1345,7 @@ readers do not read off random characters that represent icons */
 .fa-hockey-puck:before {
   content: "\f453"; }
 
-.fa-home:after {
+.fa-home:before {
   content: "\f015"; }
 
 .fa-hooli:before {
