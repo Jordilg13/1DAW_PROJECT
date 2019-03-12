@@ -76,4 +76,13 @@ class loginDAO {
         
         return $res;
     }
+    function purchaseProducts($info){
+        error_log(print_r($info,1));
+        $sql = "select * from purchases where id_purchase='".$info['id']."'";
+        $conexion = Conectar::con();
+        $res = mysqli_query($conexion, $sql);
+        Conectar::close($conexion);
+        
+        return $res;
+    }
 }

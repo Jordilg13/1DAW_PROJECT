@@ -11,7 +11,7 @@
 </p>
 
 ## About the project
-This is a web site made as a first website of 1DAW course. The page is a online shop of computers and other tech products, it accomplishes the main functions of a e-commerce with admin and client functions.
+This is a web site made as a first website of 1DAW course. The page is an online shop of computers and other tech products, it accomplishes the main functions of a e-commerce with admin and client functions.
 
 ## Built With
 

@@ -3,42 +3,42 @@
 		<ul id="flexiselDemo1">
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g1.jpg" alt=" " class="img-fluid" />
+					<img src="view/view/images/g1.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g2.jpg" alt=" " class="img-fluid" />
+					<img src="view/images/g2.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g3.jpg" alt=" " class="img-fluid" />
+					<img src="view/images/g3.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g8.jpg" alt=" " class="img-fluid" />
+					<img src="view/images/g8.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g5.jpg" alt=" " class="img-fluid" />
+					<img src="view/images/g5.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g6.jpg" alt=" " class="img-fluid" />
+					<img src="view/images/g6.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g7.jpg" alt=" " class="img-fluid" />
+					<img src="view/images/g7.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 			<li>
 				<div class="flicker_grid-agile">
-					<img src="images/g4.jpg" alt=" " class="img-fluid" />
+					<img src="view/images/g4.jpg" alt=" " class="img-fluid" />
 				</div>
 			</li>
 		</ul>

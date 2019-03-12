@@ -19,13 +19,13 @@
 	</script>
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="view/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link href="css/JiSlider.css" rel="stylesheet">
+	<link href="view/css/JiSlider.css" rel="stylesheet">
 	<!-- //banner-slider -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="view/css/style2.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<link rel="stylesheet" href="view/css/fontawesome-all.css">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 

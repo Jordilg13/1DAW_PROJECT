@@ -150,7 +150,7 @@ function _cb_findItemsByKeywords(root) {
         
         $.ajax({
           data: id_data_prod,
-          url: 'components/shop/controller/shop_controller.php?op=redirect',
+          url: 'module/components/shop/controller/shop_controller.php?op=redirect',
           type: 'POST',
           success: function(d){
             window.location.href = "index.php?page=shop_controller&op=view_product&id="+id_data_prod['id'];

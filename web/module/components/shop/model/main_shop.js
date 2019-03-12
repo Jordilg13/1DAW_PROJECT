@@ -3,7 +3,7 @@ function fillElements(id_arr) {
 
     $.ajax({
         data: id_arr,
-        url: "components/shop/controller/shop_controller.php?op=autocomplete",
+        url: "module/components/shop/controller/shop_controller.php?op=autocomplete",
         type: 'POST',
         success: function (data) {
             console.log("data");
@@ -80,7 +80,7 @@ function autocomplete(thiss) {
 
     $.ajax({
         type: "POST",
-        url: "components/shop/controller/shop_controller.php?op=autocomplete",
+        url: "module/components/shop/controller/shop_controller.php?op=autocomplete",
         data: id_arr,
         success: function (data) {
             console.log(data);
@@ -119,7 +119,7 @@ function fillSingleProduct(id) {
      
         $.ajax({
             data: {"id":id},
-            url: 'components/shop/controller/shop_controller.php?op=singlelement',
+            url: 'module/components/shop/controller/shop_controller.php?op=singlelement',
             type: 'POST',
             success: function (data) {
                 data = JSON.parse(data);
@@ -139,7 +139,7 @@ function fillSingleProduct(id) {
         })
     } else {
         $.ajax({
-            url: "components\\shop\\controller\\shop_controller.php?op=api_product",
+            url: "module/components/shop/controller/shop_controller.php?op=api_product",
             type: 'GET',
             dataType: 'JSON',
             success: function(data){
@@ -211,7 +211,7 @@ $(document).ready(function () {
 
         $.ajax({
             data: typed_arr,
-            url: "components/shop/controller/shop_controller.php?op=redirect",
+            url: "module/components/shop/controller/shop_controller.php?op=redirect",
             type: 'POST',
             success: function (data) {
                 console.log(data);

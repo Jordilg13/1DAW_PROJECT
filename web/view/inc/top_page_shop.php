@@ -20,13 +20,13 @@
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="view/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link href="css/JiSlider.css" rel="stylesheet">
+	<link href="view/css/JiSlider.css" rel="stylesheet">
 	<!-- //banner-slider -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="view/css/style2.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<link rel="stylesheet" href="view/css/fontawesome-all.css">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -48,7 +48,7 @@
 
 	<link rel="stylesheet" href="view/css/style.css">
 	<script type="text/javascript" src="view/js/menu.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
-	<script type="text/javascript" src="components/shop/model/main_shop.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
+	<script type="text/javascript" src="module/components/shop/model/main_shop.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>
 
 	<!-- main js from home module -->
 	<script type="text/javascript" src="module/home/model/main_home.js?jsVersion=<? echo _JS_VERSION_ ?>"></script>

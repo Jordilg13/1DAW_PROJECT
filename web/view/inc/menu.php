@@ -9,7 +9,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo4.png" class="logo img-fluid" alt="">Outdoor
+            <img src="view/images/logo4.png" class="logo img-fluid" alt="">Outdoor
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

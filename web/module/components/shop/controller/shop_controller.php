@@ -1,15 +1,15 @@
 <?php
     $path = $_SERVER['DOCUMENT_ROOT'] . "/web/";
-    include($path."components/shop/model/DAOShopProducts.php");
+    include($path."module/components/shop/model/DAOShopProducts.php");
     if (!isset($_GET['op'])) {
         $_GET['op'] = "list_home";
     }
     switch ($_GET['op']) {
         case 'list':
-            include($path."components/shop/view/list_shop.php");
+            include($path."module/components/shop/view/list_shop.php");
             break;
         case 'view_product':
-            include($path."components/shop/view/view_single_product.php");
+            include($path."module/components/shop/view/view_single_product.php");
             break;
         case 'singlelement':
             try {

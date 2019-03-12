@@ -4,7 +4,7 @@
 	<!-- JavaScript -->
 	<!-- <script src="js/jquery-2.2.3.min.js"></script> -->
 	<!-- Default-JavaScript-File -->
-	<script src="js/bootstrap.js"></script>
+	<script src="view/js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
 	<!-- navigation -->
@@ -38,7 +38,7 @@
 	<!-- //navigation -->
 
 	<!-- flexisel(for filter) -->
-	<script src="js/jquery.flexisel.js"></script>
+	<script src="view/js/jquery.flexisel.js"></script>
 	<script>
 		$(window).load(function () {
 			$("#flexiselDemo1").flexisel({
@@ -69,15 +69,15 @@
 	<!-- //flexisel(for filter) -->
 
 	<!-- smooth scrolling -->
-	<script src="js/SmoothScroll.min.js"></script>
+	<script src="view/js/SmoothScroll.min.js"></script>
 	<!-- move-top -->
-	<script src="js/move-top.js"></script>
+	<script src="view/js/move-top.js"></script>
 	<!-- easing -->
-	<script src="js/easing.js"></script>
+	<script src="view/js/easing.js"></script>
 	<!--  necessary snippets for few javascript files -->
-	<script src="js/outdoor.js"></script>
+	<script src="view/js/outdoor.js"></script>
 
-	<script src="js/bootstrap.js"></script>
+	<script src="view/js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
 	<!-- //Js files -->

@@ -95,6 +95,15 @@
             }
             echo json_encode($rlt->fetch_all());
             break;
+        case 'purchaseProducts':
+            try {
+                $cart_DAO = new loginDAO();
+                $rlt = $cart_DAO->purchaseProducts($_POST);
+            } catch (Exception $e) {
+                echo json_encode("error");
+            }
+            echo json_encode($rlt->fetch_all());
+            break;
         default:
             include("view/inc/error404.php");
             break;

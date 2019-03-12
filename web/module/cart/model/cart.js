@@ -26,7 +26,7 @@ function fillCart() {
                         } else {
                             $.ajax({
                                 type: 'POST',
-                                url: 'components/shop/controller/shop_controller.php?op=singlelement',
+                                url: 'module/components/shop/controller/shop_controller.php?op=singlelement',
                                 data: { "id": data[i][0] },
                                 dataType: 'json',
                                 async: false,
@@ -47,12 +47,16 @@ function append_products(data2,cant) {
         // 1-title
         // 2-price
         // 3-id
+        var api_span = "";
+        if (data2[0][0].length > 5) {
+            api_span = '<span class="badge badge-danger">API Product</span>';
+        }
         var template =
             `<div class="row cart-item" id="%s">
             <div class="col-5">
             <div class="product-overview text-left d-flex"><a class="product-img"><img src="%s" alt="product" class="img-fluid"></a>
                 <div class="product-details"><a>
-                    <h3 class="h4">%s</h3></a></div>
+                    <h3 class="h4">%s</h3></a><br>%s</div>
             </div>
             </div>
             <div class="col-2"><strong>%s</strong></div>
@@ -70,7 +74,7 @@ function append_products(data2,cant) {
     
     // print the product
     // console.log(data2);
-    $(".cart-body").append(sprintf(template, [data2[0][0], data2[0][9], data2[0][1], data2[0][4], cant, data2[0][0], data2[0][0], data2[0][0]]));
+    $(".cart-body").append(sprintf(template, [data2[0][0], data2[0][9], data2[0][1], api_span, data2[0][4], cant, data2[0][0], data2[0][0], data2[0][0]]));
 
 
     // redirect to product details(img)
@@ -272,9 +276,38 @@ function checkout() {
     });
 }
 
-function sumPrices() {
-    
-    
+function fillLastPurchase() {
+    $.ajax({
+        type: 'GET',
+        url: 'module/cart/controller/cart_controller.php?op=lastPurchase',
+        dataType: 'json',
+        success: function(data){
+            
+            $.ajax({
+                type: 'POST',
+                url: 'module/cart/controller/cart_controller.php?op=purchaseProducts',
+                data: {"id":data[0][0]},
+                dataType: 'json',
+                success: function(data2){
+                    var table_pur = document.createElement("table");
+                    table_pur.setAttribute("class","table");
+                    var row = table_pur.insertRow();
+                    row.insertCell().innerHTML = "ID_Product"
+                    row.insertCell().innerHTML = "Quantity"
+                    row.insertCell().innerHTML = "Date";
+                    
+                    data2.forEach(element => {
+                        var new_row = table_pur.insertRow();
+
+                        new_row.insertCell().innerHTML = element[2];
+                        new_row.insertCell().innerHTML = element[3];
+                        new_row.insertCell().innerHTML = element[4];
+                    });
+                    document.getElementsByClassName('card-body')[0].append(table_pur);
+                }
+            })
+        }
+    })
 }
 
 $(document).ready(function () {
@@ -291,11 +324,13 @@ $(document).ready(function () {
                 total_pr += element.parentNode.parentNode.children[1].children[0].innerHTML*element.parentNode.parentNode.children[2].children[0].children[1].value;
             });
             document.getElementById('total_price_cart').innerHTML = total_pr;
-            sumPrices();
         });
         $('.checkout_btn').on("click",function(){
             checkout();
         });
+
+        fillLastPurchase();
+
         
     }
 
